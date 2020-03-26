@@ -118,11 +118,11 @@ CDC_JOINED_DC=ops1.engr.tamu.edu
 BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`_}
 0
 2
-1585208631 alu.v
-1585182711 alu_tb.v
+1585208651 alu.v
+1585210273 alu_tb.v
 4
 0 
 1492228032 /opt/coe/synopsys/vcs-mx/L-2016.06-SP2-4/linux64/lib/libvirsim.so
 1492227340 /opt/coe/synopsys/vcs-mx/L-2016.06-SP2-4/linux64/lib/liberrorinf.so
 1492227298 /opt/coe/synopsys/vcs-mx/L-2016.06-SP2-4/linux64/lib/libsnpsmalloc.so
-1585208636 ALU_test.daidir
+1585210279 ALU_test.daidir

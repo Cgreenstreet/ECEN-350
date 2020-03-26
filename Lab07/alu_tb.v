@@ -51,6 +51,9 @@ module ALUTest_v;
 
         {BusA, BusB, ALUCtrl} = {64'hFA49D367EB2, 64'hCBCD7A09B01, 4'h2}; #40;
         passTest({Zero, BusW}, 65'h01C6174D719B3, "ADD2", passed);
+	
+	{BusA, BusB, ALUCtrl} = {64'hBADDAD, 64'hBACEBAFF, 4'h2}; #40;
+        passTest({Zero, BusW}, 65'hBB8998AC, "ADD3", passed);
 
         // AND tests
         {BusA, BusB, ALUCtrl} = {64'h9C212C90E109EF50, 64'hAF93053C8CA68455, 4'h0}; #40;
@@ -58,6 +61,9 @@ module ALUTest_v;
 
         {BusA, BusB, ALUCtrl} = {64'h7F0C4B3F, 64'h5A0E7A39, 4'h0}; #40;
         passTest({Zero, BusW}, 65'h05A0C4A39, "AND2", passed);
+	
+	{BusA, BusB, ALUCtrl} = {64'h56BFD8E, 64'h1234567, 4'h0}; #40;
+        passTest({Zero, BusW}, 65'h1234506, "AND3", passed);
 
         // ORR tests
         {BusA, BusB, ALUCtrl} = {64'h9C212C90E109EF50, 64'hAF93053C8CA68455, 4'h1}; #40;
@@ -65,13 +71,19 @@ module ALUTest_v;
 
         {BusA, BusB, ALUCtrl} = {64'h7F0C4B3F, 64'h5A0E7A39, 4'h1}; #40;
         passTest({Zero, BusW}, 65'h07F0E7B3F, "ORR2", passed);
-
-        // SUB tests
+	
+	{BusA, BusB, ALUCtrl} = {64'h56BFD8E, 64'h7F0C4B3F, 4'h1}; #40;
+        passTest({Zero, BusW}, 65'h7F6FFFBF, "ORR3", passed);
+        
+	// SUB tests
         {BusA, BusB, ALUCtrl} = {64'h7F0C4B3F, 64'h5A0E7A39, 4'b0110}; #40;
         passTest({Zero, BusW}, 65'h024FDD106, "SUB1", passed);
 
         {BusA, BusB, ALUCtrl} = {64'h82C639269A, 64'h152672E37E, 4'b0110}; #40;
         passTest({Zero, BusW}, 65'h06D9FC6431C, "SUB2", passed);
+
+	{BusA, BusB, ALUCtrl} = {64'hF, 64'h5, 4'b0110}; #40;
+        passTest({Zero, BusW}, 65'hA, "SUB3", passed);
 
         // PASS tests
         {BusA, BusB, ALUCtrl} = {64'h7F0C4B3F, 64'h5A0E7A39, 4'h7}; #40;
@@ -80,7 +92,10 @@ module ALUTest_v;
         {BusA, BusB, ALUCtrl} = {64'h82C639269A, 64'h0, 4'h7}; #40;
         passTest({Zero, BusW}, {1'b1,64'h0}, "PASS2", passed);
 
-        allPassed(passed, 10);
+	{BusA, BusB, ALUCtrl} = {64'h82C639269A, 64'h7F0C4B3F, 4'h7}; #40;
+        passTest({Zero, BusW}, {1'b0,64'h7F0C4B3F}, "PASS3", passed);
+
+        allPassed(passed, 15);
     end
 
 endmodule

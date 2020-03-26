@@ -1,113 +1,113 @@
 {
     "MlibObjs": {},
-    "CurCompileUdps": {},
+    "PrevCompiledModules": {
+        "...MASTER...": {
+            "amcQw_d": {
+                "out": "objs/amcQw_d.o",
+                "checksum": 0,
+                "bytes": 7283,
+                "mod": "...MASTER...",
+                "mode": 4
+            }
+        },
+        "ALUTest_v": {
+            "Mdhkz_d": {
+                "checksum": 0,
+                "out": "Mdhkz_d.o",
+                "bytes": 20970,
+                "mod": "ALUTest_v",
+                "mode": 4,
+                "archive": "archive.24/_14522_archive_1.a"
+            }
+        }
+    },
+    "PEModules": [],
+    "NameTable": {
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ],
+        "ALUTest_v": [
+            "ALUTest_v",
+            "Mdhkz",
+            "module"
+        ]
+    },
+    "CompileStrategy": "fullobj",
     "CurCompileModules": [
         "...MASTER...",
         "ALUTest_v",
         "ALUTest_v"
     ],
-    "SIMBData": {
-        "archive": "archive.16/_1927_archive_1.a",
-        "out": "amcQwB.o",
-        "bytes": 60165
-    },
-    "Misc": {
-        "cwd": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab07",
-        "archive_dir": "archive.16",
-        "default_output_dir": "csrc",
-        "csrc": "csrc",
-        "csrc_abs": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab07/csrc",
-        "daidir": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab07/ALU_test.daidir",
-        "daidir_abs": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab07/ALU_test.daidir"
-    },
-    "PrevCompiledModules": {
-        "ALUTest_v": {
-            "Mdhkz_d": {
-                "bytes": 18946,
-                "mod": "ALUTest_v",
-                "archive": "archive.16/_1927_archive_1.a",
-                "out": "Mdhkz_d.o",
-                "mode": 4,
-                "checksum": 0
-            }
-        },
-        "...MASTER...": {
-            "amcQw_d": {
-                "bytes": 7283,
-                "mod": "...MASTER...",
-                "mode": 4,
-                "checksum": 0,
-                "out": "objs/amcQw_d.o"
-            }
-        }
-    },
-    "NameTable": {
-        "ALUTest_v": [
-            "ALUTest_v",
-            "Mdhkz",
-            "module"
-        ],
-        "...MASTER...": [
-            "SIM",
-            "amcQw",
-            "module"
-        ]
-    },
-    "CompileStrategy": "fullobj",
     "stat": {
         "ru_self_cgstart": {
-            "ru_utime_sec": 0.063846,
-            "ru_nvcsw": 165,
+            "ru_utime_sec": 0.061470999999999998,
+            "ru_stime_sec": 0.058396999999999998,
+            "ru_maxrss_kb": 60776,
+            "ru_nvcsw": 170,
+            "ru_minflt": 13949,
             "ru_majflt": 0,
-            "ru_minflt": 13985,
-            "ru_stime_sec": 0.051736999999999998,
-            "ru_maxrss_kb": 61024,
-            "ru_nivcsw": 43
+            "ru_nivcsw": 44
         },
-        "CodeGen(%)": 27.1638317533112,
-        "ru_self_end": {
-            "ru_utime_sec": 0.087656999999999999,
-            "ru_nvcsw": 232,
-            "ru_majflt": 0,
-            "ru_minflt": 16243,
-            "ru_stime_sec": 0.065464999999999995,
-            "ru_maxrss_kb": 66560,
-            "ru_nivcsw": 47
-        },
-        "mopSpeed": 35529.797152576539,
+        "peak_mem_kb": 266416,
         "ru_childs_cgstart": {
             "ru_utime_sec": 0.0,
-            "ru_nvcsw": 0,
-            "ru_majflt": 0,
-            "ru_minflt": 0,
             "ru_stime_sec": 0.0,
             "ru_maxrss_kb": 0,
+            "ru_nvcsw": 0,
+            "ru_minflt": 0,
+            "ru_majflt": 0,
             "ru_nivcsw": 0
         },
-        "mop/quad": 2.8484848484848486,
-        "nMops": 846,
-        "ru_childs_end": {
-            "ru_utime_sec": 0.0025560000000000001,
-            "ru_nvcsw": 6,
+        "CodeGen(%)": 25.841164903306758,
+        "nMops": 967,
+        "totalObjSize": 82495,
+        "quadSpeed": 17320.261437908492,
+        "nQuads": 371,
+        "ru_self_end": {
+            "ru_utime_sec": 0.082891000000000006,
+            "ru_stime_sec": 0.076751,
+            "ru_maxrss_kb": 66416,
+            "ru_nvcsw": 243,
+            "ru_minflt": 16216,
             "ru_majflt": 0,
+            "ru_nivcsw": 48
+        },
+        "mopSpeed": 45144.724556489244,
+        "ru_childs_end": {
+            "ru_utime_sec": 0.00093999999999999997,
+            "ru_stime_sec": 0.0065859999999999998,
+            "ru_maxrss_kb": 20724,
+            "ru_nvcsw": 6,
             "ru_minflt": 590,
-            "ru_stime_sec": 0.0051120000000000002,
-            "ru_maxrss_kb": 20876,
+            "ru_majflt": 0,
             "ru_nivcsw": 2
         },
-        "outputSizePerQuad": 266.0,
-        "nQuads": 297,
-        "totalObjSize": 79119,
-        "quadSpeed": 12473.226659947084,
-        "Frontend(%)": 72.8361682466888,
-        "peak_mem_kb": 266452
+        "mop/quad": 2.6064690026954178,
+        "outputSizePerQuad": 222.0,
+        "Frontend(%)": 74.158835096693238
     },
-    "PEModules": [],
+    "CurCompileUdps": {},
+    "SIMBData": {
+        "bytes": 61025,
+        "out": "amcQwB.o",
+        "archive": "archive.24/_14522_archive_1.a"
+    },
     "LVLData": [
         "SIM"
     ],
     "CompileProcesses": [
-        "cgproc.1927.json"
+        "cgproc.14522.json"
     ],
+    "Misc": {
+        "cwd": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab07",
+        "daidir_abs": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab07/ALU_test.daidir",
+        "csrc": "csrc",
+        "default_output_dir": "csrc",
+        "daidir": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab07/ALU_test.daidir",
+        "csrc_abs": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab07/csrc",
+        "archive_dir": "archive.24"
+    },
     "CompileStatus": "Successful"
 }

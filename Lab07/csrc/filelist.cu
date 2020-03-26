@@ -1,12 +1,12 @@
 PIC_LD=ld
 
 ARCHIVE_OBJS=
-ARCHIVE_OBJS += _1927_archive_1.so
-_1927_archive_1.so : archive.16/_1927_archive_1.a
+ARCHIVE_OBJS += _14522_archive_1.so
+_14522_archive_1.so : archive.24/_14522_archive_1.a
 	@$(AR) -s $<
-	@$(PIC_LD) -shared  -o .//../ALU_test.daidir//_1927_archive_1.so --whole-archive $< --no-whole-archive
+	@$(PIC_LD) -shared  -o .//../ALU_test.daidir//_14522_archive_1.so --whole-archive $< --no-whole-archive
 	@rm -f $@
-	@ln -sf .//../ALU_test.daidir//_1927_archive_1.so $@
+	@ln -sf .//../ALU_test.daidir//_14522_archive_1.so $@
 
 
 
