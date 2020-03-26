@@ -1,0 +1,51 @@
+01:29:35    16 -->                                                             [tcl] ucliGUI::connect -toolargs -ucligui -toolexe ./simv -pid 8331 -toolin /tmp/vcs_20200326062931_8330_caleb.greenstreet..stdin -toolout /tmp/vcs_20200326062931_8330_caleb.greenstreet..stdout  
+01:29:35    17 -->                                                                 [tcl] set ucliGUI::state
+01:29:35    18 -->                                                                     [tcl] gui_update_simulator_buttons
+01:29:37    19 -->                                                                         [tcl] set ucliGUI::state
+01:29:37    20 -->                                                                             [tcl] ucliCore::getToolPID
+01:29:37    21 -->                                                                                 [tcl] synopsys::env hasTB
+01:29:37    22 -->                                                                                     [tcl] trigger_hier_stack_context_switch 0
+01:29:37    23 -->                                                                                         [tcl] synUtils::setDVEInitPhase 1
+01:29:37    24 -->                                                                                             [tcl] gui_get_env SIMSETUP::SIMVPD
+01:29:37    25 --> ...  [tcl] synopsys::dump -type VPD -file /home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab07/inter.vpd -locking
+01:29:37    26 --> ...      [tcl] synopsys::dump -autoflush on -fid VPD0
+01:29:37    27 --> ...          [tcl] set ::dve_fid VPD0
+01:29:37    28 --> ...              [tcl] synUtils::setDVEInitPhase 0
+01:29:37    29 --> ...                  [tcl] ucliCore::getToolPID
+01:29:37    30 --> ...                      [tcl] synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpggdAxO
+01:29:37    31 --> ...                          [tcl] synUtils::sendTool -active {_icl_start_rpc -single_cpu -version "L-2016.06-SP2-4_Full64" -sync_file /tmp/vcs_dve_rpc.caleb.greenstreet.8331}
+01:29:37    32 --> ...                              [tcl] synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.caleb.greenstreet.8331}
+01:29:37    33 --> ...                                  [tcl] dveMisc::vbusExpand ImmGeneratorTest
+01:29:37    34 --> ...                                      [tcl] config endofsim noexit
+01:29:37    35 --> ...                                          [tcl] config onfail enable all
+01:29:37    36 --> ...                                              [tcl] config syscaddplainmembers
+01:29:37    37 --> ...                                                  [tcl] config syscaddsourcenames
+01:29:37    38 --> ...                                                      [tcl] config syscaddstructtypes
+01:29:37    39 --> ...                                                          [tcl] synopsys::listing -disable
+01:30:03    40 --> ...                                                              [tcl] ucliGUI::getSignalValues -scope ImmGeneratorTest -radix {binary } -list {{passed[7]} }
+01:30:04    41 --> ...                                                                  [tcl] ucliGUI::getSignalValues -scope ImmGeneratorTest -radix {binary } -list {{passed[6]} }
+01:30:18    42 --> ...                                                                      [tcl] ucliGUI::getSignalValues -scope ImmGeneratorTest -radix {binary } -list {{Imm[8]} }
+01:30:25    43 --> ...                                                                          [tcl] synopsys::dump -add {ImmGeneratorTest} -scope "." -depth 1 -fid VPD0
+01:30:40    44 --> ...                                                                              [tcl] synopsys::run
+01:30:40    45 --> ...                                                                                  [tcl] set ucliGUI::state
+01:30:40    46 --> ...                                                                                      [tcl] gui_update_simulator_buttons
+01:30:40    47 --> ...                                                                                          [tcl] set ucliGUI::state
+01:30:40    48 --> ...                                                                                              [tcl] set ucliGUI::state
+01:30:40    49 --> ...                                                                                                  [tcl] set ucliGUI::state
+01:30:40    50 --> ...  [tcl] catch {senv activeDomain} dveMisc::result 
+01:30:40    51 --> ...      [tcl] set dveMisc::result
+01:30:40    52 --> ...          [tcl] gui_update_simulator_buttons
+01:34:02    53 --> ...              [tcl] ucliGUI::getSignalValues -scope ImmGeneratorTest -radix {binary binary } -list {{passed[7]} {passed[6]} }
+01:34:02    54 --> ...                  [tcl] ucliGUI::getSignalValues -scope ImmGeneratorTest -radix {binary } -list {{Imm[8]} }
+01:43:45    55 --> ...                      [tcl] ucliCore::getToolPID
+01:44:03    56 --> ...                          [tcl] if [catch {gui_sim_terminate}] {gui_sim_terminate -kill}
+01:44:03    57 --> ...                              [tcl] synopsys::finish
+01:44:03    58 --> ...                                  [tcl] set ucliGUI::state
+01:44:03    59 --> ...                                      [tcl] gui_update_simulator_buttons
+01:44:03    60 --> ...                                          [tcl] set ucliGUI::state
+01:44:03    61 --> ...                                              [tcl] catch {senv activeDomain} dveMisc::result 
+01:44:03    62 --> ...                                                  [tcl] set dveMisc::result
+01:44:04    63 --> ...                                                      [tcl] gui_update_simulator_buttons
+01:44:04    64 --> ...                                                          [tcl] catch {senv activeDomain} dveMisc::result 
+01:44:04    65 --> ...                                                              [tcl] set dveMisc::result
+01:44:04    66 --> ...                                                                  [tcl] ucli_exit

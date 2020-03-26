@@ -1,0 +1,113 @@
+{
+    "PEModules": [],
+    "MlibObjs": {},
+    "CurCompileUdps": {},
+    "PrevCompiledModules": {
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 7283,
+                "mod": "...MASTER...",
+                "mode": 4,
+                "checksum": 0,
+                "out": "objs/amcQw_d.o"
+            }
+        },
+        "ALUTest_v": {
+            "Mdhkz_d": {
+                "archive": "archive.15/_736_archive_1.a",
+                "bytes": 18714,
+                "mod": "ALUTest_v",
+                "out": "Mdhkz_d.o",
+                "mode": 4,
+                "checksum": 0
+            }
+        }
+    },
+    "NameTable": {
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ],
+        "ALUTest_v": [
+            "ALUTest_v",
+            "Mdhkz",
+            "module"
+        ]
+    },
+    "CompileStatus": "Successful",
+    "LVLData": [
+        "SIM"
+    ],
+    "stat": {
+        "ru_self_cgstart": {
+            "ru_utime_sec": 0.057632999999999997,
+            "ru_maxrss_kb": 60416,
+            "ru_stime_sec": 0.055574999999999999,
+            "ru_minflt": 13846,
+            "ru_nivcsw": 44,
+            "ru_majflt": 0,
+            "ru_nvcsw": 169
+        },
+        "ru_childs_cgstart": {
+            "ru_utime_sec": 0.0,
+            "ru_maxrss_kb": 0,
+            "ru_stime_sec": 0.0,
+            "ru_minflt": 0,
+            "ru_nivcsw": 0,
+            "ru_majflt": 0,
+            "ru_nvcsw": 0
+        },
+        "ru_self_end": {
+            "ru_utime_sec": 0.077811000000000005,
+            "ru_maxrss_kb": 65992,
+            "ru_stime_sec": 0.074009000000000005,
+            "ru_minflt": 16101,
+            "ru_nivcsw": 48,
+            "ru_majflt": 0,
+            "ru_nvcsw": 240
+        },
+        "CodeGen(%)": 25.932066160311532,
+        "totalObjSize": 79111,
+        "nMops": 827,
+        "ru_childs_end": {
+            "ru_utime_sec": 0.0,
+            "ru_maxrss_kb": 20316,
+            "ru_stime_sec": 0.0078270000000000006,
+            "ru_minflt": 590,
+            "ru_nivcsw": 2,
+            "ru_majflt": 0,
+            "ru_nvcsw": 6
+        },
+        "nQuads": 291,
+        "mopSpeed": 40985.231440182361,
+        "quadSpeed": 14421.647338685691,
+        "mop/quad": 2.8419243986254297,
+        "outputSizePerQuad": 271.0,
+        "Frontend(%)": 74.067933839688479,
+        "peak_mem_kb": 266456
+    },
+    "Misc": {
+        "csrc": "csrc",
+        "cwd": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab07",
+        "csrc_abs": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab07/csrc",
+        "daidir": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab07/ALU_test.daidir",
+        "default_output_dir": "csrc",
+        "daidir_abs": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab07/ALU_test.daidir",
+        "archive_dir": "archive.15"
+    },
+    "CompileStrategy": "fullobj",
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "archive": "archive.15/_736_archive_1.a",
+        "bytes": 60165
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "ALUTest_v",
+        "ALUTest_v"
+    ],
+    "CompileProcesses": [
+        "cgproc.736.json"
+    ]
+}

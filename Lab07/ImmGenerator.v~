@@ -1,0 +1,28 @@
+module ImmGenerator(Imm64, Imm32, Ctrl);
+   output [31:0] Imm64;
+   input [15:0]  Imm32;
+   input [1:0]	 Ctrl;
+
+
+   wire 	 extBit;
+
+   //assign extBit = (Ctrl ? 1'b0 : Imm32[31]);
+   //assign Imm32 = {{32{extBit}}, Imm32};
+
+   
+   always@(Ctrl)
+     begin
+        if(Ctrl[1:0] == 2'b00) begin  // I-type
+	   assign Imm64 = {52'b0,Imm32[21:10]};
+        end
+        if(Ctrl[1:0] == 2'b01)begin // Load/Store
+           assign Imm64 = {{55{Imm32[8]}}, Imm32[20:12]};
+	end
+	if(Ctrl[1:0] == 2'b10)begin // Uncond. Branch
+	 assign Imm64 = {{36{Imm32[25]}}, Imm32[25:0], 2'b0};
+	end
+	if(Ctrl[1:0] == 2'b11)begin // Cond. Branch
+	  assign Imm64 = {{43{Imm32[25]}}, Imm[23:5], 2'b0};
+	end
+      end
+   endmodule

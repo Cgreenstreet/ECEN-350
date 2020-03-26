@@ -1,0 +1,23 @@
+Warning : License for product VCSRuntime_Net(725) will expire within 9 days, on: 03-apr-2020.
+If you would like to temporarily disable this message, set 
+ the VCS_LIC_EXPIRE_WARNING environment variable to the number of days
+before expiration that you want this message to start (the minimum is 0).
+Chronologic VCS simulator copyright 1991-2016
+Contains Synopsys proprietary information.
+Compiler version L-2016.06-SP2-4_Full64; Runtime version L-2016.06-SP2-4_Full64;  Mar 26 01:29 2020
+VCD+ Writer L-2016.06-SP2-4_Full64 Copyright (c) 1991-2016 by Synopsys Inc.
+The file '/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab07/inter.vpd' was opened successfully.
+           IMM Test 1 passed
+           IMM Test 2 failed: 000000000000000c should be 0000000000000fff
+           MEM Test 1 failed: 000000000000010f should be ffffffffffffff0f
+           MEM Test 2 failed: 000000000000010f should be 0000000000000028
+        Branch Test 1 failed: 0000000000000008 should be 0000000000000002
+        Branch Test 2 failed: 0000000000000008 should be fffffffffffffffc
+           CBZ Test 1 failed: 0000000000000008 should be 0000000000000002
+           CBZ Test 2 failed: 0000000000000008 should be fffffffffffffffe
+Some tests failed
+Simulation complete, time is 170000 ps.
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 170000 ps
+CPU Time:      0.590 seconds;       Data structure size:   0.0Mb
+Thu Mar 26 01:44:03 2020
