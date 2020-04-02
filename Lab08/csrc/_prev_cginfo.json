@@ -1,0 +1,113 @@
+{
+    "MlibObjs": {},
+    "PrevCompiledModules": {
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 7283,
+                "mod": "...MASTER...",
+                "mode": 4,
+                "checksum": 0,
+                "out": "objs/amcQw_d.o"
+            }
+        },
+        "NextPClogicTest": {
+            "RwtTU_d": {
+                "bytes": 15698,
+                "mod": "NextPClogicTest",
+                "archive": "archive.53/_6005_archive_1.a",
+                "out": "RwtTU_d.o",
+                "mode": 4,
+                "checksum": 0
+            }
+        }
+    },
+    "NameTable": {
+        "NextPClogicTest": [
+            "NextPClogicTest",
+            "RwtTU",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CompileStatus": "Successful",
+    "LVLData": [
+        "SIM"
+    ],
+    "CompileStrategy": "fullobj",
+    "stat": {
+        "ru_self_cgstart": {
+            "ru_nivcsw": 47,
+            "ru_utime_sec": 0.053733000000000003,
+            "ru_nvcsw": 166,
+            "ru_stime_sec": 0.060449999999999997,
+            "ru_minflt": 13614,
+            "ru_maxrss_kb": 59360,
+            "ru_majflt": 0
+        },
+        "ru_childs_cgstart": {
+            "ru_nivcsw": 0,
+            "ru_utime_sec": 0.0,
+            "ru_nvcsw": 0,
+            "ru_stime_sec": 0.0,
+            "ru_minflt": 0,
+            "ru_maxrss_kb": 0,
+            "ru_majflt": 0
+        },
+        "nQuads": 445,
+        "ru_childs_end": {
+            "ru_nivcsw": 2,
+            "ru_utime_sec": 0.0021189999999999998,
+            "ru_nvcsw": 5,
+            "ru_stime_sec": 0.0052989999999999999,
+            "ru_minflt": 590,
+            "ru_maxrss_kb": 19476,
+            "ru_majflt": 0
+        },
+        "Frontend(%)": 75.333323986709104,
+        "mop/quad": 2.6224719101123597,
+        "nMops": 1167,
+        "totalObjSize": 74881,
+        "ru_self_end": {
+            "ru_nivcsw": 51,
+            "ru_utime_sec": 0.071327000000000002,
+            "ru_nvcsw": 222,
+            "ru_stime_sec": 0.078074000000000005,
+            "ru_minflt": 15778,
+            "ru_maxrss_kb": 64708,
+            "ru_majflt": 0
+        },
+        "outputSizePerQuad": 168.0,
+        "mopSpeed": 66329.43048766625,
+        "quadSpeed": 25292.713425031263,
+        "CodeGen(%)": 24.666676013290896,
+        "peak_mem_kb": 266216
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "NextPClogicTest",
+        "NextPClogicTest"
+    ],
+    "CurCompileUdps": {},
+    "CompileProcesses": [
+        "cgproc.6005.json"
+    ],
+    "SIMBData": {
+        "archive": "archive.53/_6005_archive_1.a",
+        "out": "amcQwB.o",
+        "bytes": 59183
+    },
+    "PEModules": [],
+    "Misc": {
+        "cwd": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab08",
+        "csrc_abs": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab08/csrc",
+        "csrc": "csrc",
+        "daidir": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab08/nextpcSim.daidir",
+        "archive_dir": "archive.53",
+        "daidir_abs": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab08/nextpcSim.daidir",
+        "default_output_dir": "csrc"
+    }
+}

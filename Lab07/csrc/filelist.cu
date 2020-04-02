@@ -1,12 +1,12 @@
 PIC_LD=ld
 
 ARCHIVE_OBJS=
-ARCHIVE_OBJS += _14522_archive_1.so
-_14522_archive_1.so : archive.24/_14522_archive_1.a
+ARCHIVE_OBJS += _11136_archive_1.so
+_11136_archive_1.so : archive.30/_11136_archive_1.a
 	@$(AR) -s $<
-	@$(PIC_LD) -shared  -o .//../ALU_test.daidir//_14522_archive_1.so --whole-archive $< --no-whole-archive
+	@$(PIC_LD) -shared  -o .//../ImmGenerator_test.daidir//_11136_archive_1.so --whole-archive $< --no-whole-archive
 	@rm -f $@
-	@ln -sf .//../ALU_test.daidir//_14522_archive_1.so $@
+	@ln -sf .//../ImmGenerator_test.daidir//_11136_archive_1.so $@
 
 
 
@@ -20,9 +20,9 @@ VCS_OBJS0 =objs/amcQw_d.o
 	$(CC_CG) $(CFLAGS_CG) -c -o $@ $<
 
 $(VCS_ARC0) : $(VCS_OBJS0)
-	$(PIC_LD) -shared  -o .//../ALU_test.daidir//$(VCS_ARC0) $(VCS_OBJS0)
+	$(PIC_LD) -shared  -o .//../ImmGenerator_test.daidir//$(VCS_ARC0) $(VCS_OBJS0)
 	rm -f $(VCS_ARC0)
-	@ln -sf .//../ALU_test.daidir//$(VCS_ARC0) $(VCS_ARC0)
+	@ln -sf .//../ImmGenerator_test.daidir//$(VCS_ARC0) $(VCS_ARC0)
 
 CU_UDP_OBJS = \
 

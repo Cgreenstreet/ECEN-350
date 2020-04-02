@@ -24,5 +24,7 @@ module ImmGenerator(Imm64, Imm26, Ctrl);
 	if(Ctrl[1:0] == 2'b11)begin // Cond. Branch
 	  Imm64 = {{45{Imm26[23]}}, Imm26[23:5]};
 	end
+	
+	
       end
    endmodule

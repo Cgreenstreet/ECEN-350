@@ -1,113 +1,113 @@
 {
+    "CurCompileModules": [
+        "...MASTER...",
+        "ImmGeneratorTest",
+        "ImmGeneratorTest"
+    ],
     "MlibObjs": {},
     "PrevCompiledModules": {
-        "...MASTER...": {
-            "amcQw_d": {
-                "out": "objs/amcQw_d.o",
+        "ImmGeneratorTest": {
+            "jCshD_d": {
+                "archive": "archive.30/_11136_archive_1.a",
+                "bytes": 15609,
                 "checksum": 0,
-                "bytes": 7283,
-                "mod": "...MASTER...",
+                "mod": "ImmGeneratorTest",
+                "out": "jCshD_d.o",
                 "mode": 4
             }
         },
-        "ALUTest_v": {
-            "Mdhkz_d": {
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 7291,
                 "checksum": 0,
-                "out": "Mdhkz_d.o",
-                "bytes": 20970,
-                "mod": "ALUTest_v",
+                "mod": "...MASTER...",
                 "mode": 4,
-                "archive": "archive.24/_14522_archive_1.a"
+                "out": "objs/amcQw_d.o"
             }
         }
     },
-    "PEModules": [],
     "NameTable": {
+        "ImmGeneratorTest": [
+            "ImmGeneratorTest",
+            "jCshD",
+            "module"
+        ],
         "...MASTER...": [
             "SIM",
             "amcQw",
             "module"
-        ],
-        "ALUTest_v": [
-            "ALUTest_v",
-            "Mdhkz",
-            "module"
         ]
     },
-    "CompileStrategy": "fullobj",
-    "CurCompileModules": [
-        "...MASTER...",
-        "ALUTest_v",
-        "ALUTest_v"
+    "CompileProcesses": [
+        "cgproc.11136.json"
     ],
+    "CompileStrategy": "fullobj",
     "stat": {
+        "nQuads": 259,
         "ru_self_cgstart": {
-            "ru_utime_sec": 0.061470999999999998,
-            "ru_stime_sec": 0.058396999999999998,
-            "ru_maxrss_kb": 60776,
-            "ru_nvcsw": 170,
-            "ru_minflt": 13949,
+            "ru_utime_sec": 0.059123000000000002,
+            "ru_stime_sec": 0.050825000000000002,
             "ru_majflt": 0,
-            "ru_nivcsw": 44
+            "ru_maxrss_kb": 59800,
+            "ru_nvcsw": 162,
+            "ru_minflt": 13684,
+            "ru_nivcsw": 43
         },
-        "peak_mem_kb": 266416,
         "ru_childs_cgstart": {
             "ru_utime_sec": 0.0,
             "ru_stime_sec": 0.0,
+            "ru_majflt": 0,
             "ru_maxrss_kb": 0,
             "ru_nvcsw": 0,
             "ru_minflt": 0,
-            "ru_majflt": 0,
             "ru_nivcsw": 0
         },
-        "CodeGen(%)": 25.841164903306758,
-        "nMops": 967,
-        "totalObjSize": 82495,
-        "quadSpeed": 17320.261437908492,
-        "nQuads": 371,
+        "mopSpeed": 40179.206371782115,
+        "peak_mem_kb": 266232,
+        "nMops": 565,
+        "quadSpeed": 18418.432655383305,
+        "totalObjSize": 75195,
         "ru_self_end": {
-            "ru_utime_sec": 0.082891000000000006,
-            "ru_stime_sec": 0.076751,
-            "ru_maxrss_kb": 66416,
-            "ru_nvcsw": 243,
-            "ru_minflt": 16216,
+            "ru_utime_sec": 0.073185,
+            "ru_stime_sec": 0.068634000000000001,
             "ru_majflt": 0,
-            "ru_nivcsw": 48
+            "ru_maxrss_kb": 65100,
+            "ru_nvcsw": 222,
+            "ru_minflt": 15890,
+            "ru_nivcsw": 47
         },
-        "mopSpeed": 45144.724556489244,
         "ru_childs_end": {
-            "ru_utime_sec": 0.00093999999999999997,
-            "ru_stime_sec": 0.0065859999999999998,
-            "ru_maxrss_kb": 20724,
+            "ru_utime_sec": 0.0,
+            "ru_stime_sec": 0.0062729999999999999,
+            "ru_majflt": 0,
+            "ru_maxrss_kb": 19500,
             "ru_nvcsw": 6,
             "ru_minflt": 590,
-            "ru_majflt": 0,
             "ru_nivcsw": 2
         },
-        "mop/quad": 2.6064690026954178,
-        "outputSizePerQuad": 222.0,
-        "Frontend(%)": 74.158835096693238
+        "CodeGen(%)": 19.214319874291178,
+        "mop/quad": 2.1814671814671813,
+        "outputSizePerQuad": 290.0,
+        "Frontend(%)": 80.785680125708822
     },
     "CurCompileUdps": {},
     "SIMBData": {
-        "bytes": 61025,
         "out": "amcQwB.o",
-        "archive": "archive.24/_14522_archive_1.a"
+        "archive": "archive.30/_11136_archive_1.a",
+        "bytes": 59626
     },
+    "PEModules": [],
     "LVLData": [
         "SIM"
     ],
-    "CompileProcesses": [
-        "cgproc.14522.json"
-    ],
     "Misc": {
-        "cwd": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab07",
-        "daidir_abs": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab07/ALU_test.daidir",
-        "csrc": "csrc",
         "default_output_dir": "csrc",
-        "daidir": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab07/ALU_test.daidir",
+        "cwd": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab07",
+        "csrc": "csrc",
+        "archive_dir": "archive.30",
+        "daidir_abs": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab07/ImmGenerator_test.daidir",
         "csrc_abs": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab07/csrc",
-        "archive_dir": "archive.24"
+        "daidir": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab07/ImmGenerator_test.daidir"
     },
     "CompileStatus": "Successful"
 }

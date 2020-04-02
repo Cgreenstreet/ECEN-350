@@ -8,7 +8,7 @@ VSRC=..
 TARGET_ARCH=
 
 # Choose name of executable 
-PRODUCTBASE=$(VSRC)/ALU_test
+PRODUCTBASE=$(VSRC)/ImmGenerator_test
 
 PRODUCT=$(PRODUCTBASE)
 
@@ -41,7 +41,7 @@ STRIPFLAGS=
 PRE_LDFLAGS= # Loader Flags
 LDFLAGS= -rdynamic 
 # Picarchive Flags
-PICLDFLAGS=-Wl,-rpath-link=./ -Wl,-rpath='$$ORIGIN'/ALU_test.daidir/ -Wl,-rpath=./ALU_test.daidir/ -Wl,-rpath='$$ORIGIN'/ALU_test.daidir//scsim.db.dir 
+PICLDFLAGS=-Wl,-rpath-link=./ -Wl,-rpath='$$ORIGIN'/ImmGenerator_test.daidir/ -Wl,-rpath=./ImmGenerator_test.daidir/ -Wl,-rpath='$$ORIGIN'/ImmGenerator_test.daidir//scsim.db.dir 
 
 # C run time startup
 CRT0=

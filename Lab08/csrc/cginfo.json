@@ -1,0 +1,113 @@
+{
+    "CurCompileUdps": {},
+    "MlibObjs": {},
+    "stat": {
+        "outputSizePerQuad": 285.0,
+        "quadSpeed": 14728.855166257536,
+        "ru_self_cgstart": {
+            "ru_utime_sec": 0.064194000000000001,
+            "ru_stime_sec": 0.049697999999999999,
+            "ru_maxrss_kb": 59476,
+            "ru_majflt": 0,
+            "ru_minflt": 13642,
+            "ru_nivcsw": 44,
+            "ru_nvcsw": 171
+        },
+        "totalObjSize": 75469,
+        "nMops": 684,
+        "ru_childs_cgstart": {
+            "ru_utime_sec": 0.0,
+            "ru_stime_sec": 0.0,
+            "ru_maxrss_kb": 0,
+            "ru_majflt": 0,
+            "ru_minflt": 0,
+            "ru_nivcsw": 0,
+            "ru_nvcsw": 0
+        },
+        "nQuads": 264,
+        "ru_self_end": {
+            "ru_utime_sec": 0.082117999999999997,
+            "ru_stime_sec": 0.066880999999999996,
+            "ru_maxrss_kb": 64788,
+            "ru_majflt": 0,
+            "ru_minflt": 15809,
+            "ru_nivcsw": 48,
+            "ru_nvcsw": 230
+        },
+        "ru_childs_end": {
+            "ru_utime_sec": 0.0019810000000000001,
+            "ru_stime_sec": 0.0049540000000000001,
+            "ru_maxrss_kb": 19596,
+            "ru_majflt": 0,
+            "ru_minflt": 591,
+            "ru_nivcsw": 2,
+            "ru_nvcsw": 6
+        },
+        "mopSpeed": 38161.124748939976,
+        "mop/quad": 2.5909090909090908,
+        "Frontend(%)": 78.17287318249349,
+        "CodeGen(%)": 21.82712681750651,
+        "peak_mem_kb": 266216
+    },
+    "CompileProcesses": [
+        "cgproc.6677.json"
+    ],
+    "PrevCompiledModules": {
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 7283,
+                "mod": "...MASTER...",
+                "mode": 4,
+                "out": "objs/amcQw_d.o",
+                "checksum": 0
+            }
+        },
+        "NextPClogicTest": {
+            "RwtTU_d": {
+                "bytes": 15698,
+                "mod": "NextPClogicTest",
+                "checksum": 0,
+                "out": "RwtTU_d.o",
+                "mode": 4,
+                "archive": "archive.54/_6677_archive_1.a"
+            }
+        }
+    },
+    "NameTable": {
+        "NextPClogicTest": [
+            "NextPClogicTest",
+            "RwtTU",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "NextPClogicTest",
+        "NextPClogicTest"
+    ],
+    "PEModules": [],
+    "CompileStrategy": "fullobj",
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 59293,
+        "archive": "archive.54/_6677_archive_1.a"
+    },
+    "LVLData": [
+        "SIM"
+    ],
+    "Misc": {
+        "cwd": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab08",
+        "csrc": "csrc",
+        "csrc_abs": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab08/csrc",
+        "default_output_dir": "csrc",
+        "daidir": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab08/nextpcSim.daidir",
+        "daidir_abs": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab08/nextpcSim.daidir",
+        "archive_dir": "archive.54"
+    },
+    "CompileStatus": "Successful"
+}

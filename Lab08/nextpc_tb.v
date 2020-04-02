@@ -89,7 +89,38 @@ module NextPClogicTest;
 		#4;
 		passTest(NextPC, expectedNextPC, "Unconditional Branch Test", passed);
 		numTests = numTests + 1;
+
+		CurrentPC = 64'h10;
+		SignExtImm64 = 64'h8;
+		Branch = 1'b1;
+		ALUZero = 1'b0;
+		Uncondbranch = 1'b0;
+		expectedNextPC = 64'h14;
+		#4;
+		passTest(NextPC, expectedNextPC, "Conditional - Don't Take Branch Test [NEW]", passed);
+		numTests = numTests + 1;
+
+		CurrentPC = 64'h0;
+		SignExtImm64 = 64'h4;
+		Branch = 1'b0;
+		ALUZero = 1'b1;
+		Uncondbranch = 1'b1;
+		expectedNextPC = 64'h10;
+		#4;
+		passTest(NextPC, expectedNextPC, "Unconditional Branch w/ALUZero Test[NEW]", passed);
+		numTests = numTests + 1;
 		
+		
+		CurrentPC = 64'h10;
+		SignExtImm64 = 64'b0;
+		Branch = 1'b0;
+		ALUZero = 1'b1;
+		Uncondbranch = 1'b0;
+		expectedNextPC = 64'h14;
+		#4;
+		passTest(NextPC, expectedNextPC, "PC+4 w/ALUZero Test [NEW]", passed);
+		numTests = numTests + 1;
+
 		allPassed(passed, numTests);
 
 		$finish;

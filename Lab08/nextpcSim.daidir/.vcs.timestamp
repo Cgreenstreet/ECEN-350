@@ -1,0 +1,128 @@
+0 
+23
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/opt/coe/synopsys/vcs-mx/L-2016.06-SP2-4/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -rdynamic
+-Mobjects= /opt/coe/synopsys/vcs-mx/L-2016.06-SP2-4/linux64/lib/libvirsim.so /opt/coe/synopsys/vcs-mx/L-2016.06-SP2-4/linux64/lib/liberrorinf.so /opt/coe/synopsys/vcs-mx/L-2016.06-SP2-4/linux64/lib/libsnpsmalloc.so
+-Mout=nextpcSim
+-Msaverestoreobj=/opt/coe/synopsys/vcs-mx/L-2016.06-SP2-4/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=-ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/opt/coe/synopsys/vcs-mx/L-2016.06-SP2-4/include
+-full64
+-gen_obj
+-o nextpcSim
+-picarchive
+/opt/coe/synopsys/vcs-mx/L-2016.06-SP2-4/linux64/bin/vcs1
+nextpc.v
+nextpc_tb.v
+92
+sysc_uni_pwd=/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab08
+XDG_SESSION_ID=30078
+XDG_RUNTIME_DIR=/run/user/825005586
+XDG_DATA_DIRS=/home/ugrads/c/caleb.greenstreet/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+XAUTHORITY=/tmp/.Xauthority-Ad57lH
+VMR_MODE_FLAG=64
+VCS_MX_HOME_INTERNAL=1
+VCS_MODE_FLAG=64
+VCS_HOME=/opt/coe/synopsys/vcs-mx/L-2016.06-SP2-4
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH_OVERRIDE=linux
+VCS_ARCH=linux64
+USER_PRINCIPAL_NAME=caleb.greenstreet@AUTH.TAMU.EDU
+UNAME=/bin/uname
+TOOL_HOME=/opt/coe/synopsys/vcs-mx/L-2016.06-SP2-4/linux64
+SSH_TTY=/dev/pts/12
+SSH_CONNECTION=10.55.157.180 65353 128.194.17.175 22
+SSH_CLIENT=10.55.157.180 65353 22
+SRUN_DEBUG=3
+SLURM_WORKING_CLUSTER=olympus:olympus.ece.tamu.edu:6817:8704:109
+SLURM_UMASK=0002
+SLURM_TOPOLOGY_ADDR_PATTERN=node
+SLURM_TOPOLOGY_ADDR=n01-zeus
+SLURM_TASK_PID=29225
+SLURM_TASKS_PER_NODE=1
+SLURM_SUBMIT_HOST=olympus.ece.tamu.edu
+SLURM_SUBMIT_DIR=/home/ugrads/c/caleb.greenstreet
+SLURM_STEP_TASKS_PER_NODE=1
+SLURM_STEP_NUM_TASKS=1
+SLURM_STEP_NUM_NODES=1
+SLURM_STEP_NODELIST=n01-zeus
+SLURM_STEP_LAUNCHER_PORT=41457
+SLURM_STEP_ID=0
+SLURM_STEPID=0
+SLURM_SRUN_COMM_PORT=41457
+SLURM_SRUN_COMM_HOST=192.168.2.3
+SLURM_PTY_WIN_ROW=95
+SLURM_PTY_WIN_COL=79
+SLURM_PTY_PORT=37592
+SLURM_PROCID=0
+SLURM_PRIO_PROCESS=0
+SLURM_NTASKS=1
+SLURM_NPROCS=1
+SLURM_NODELIST=n01-zeus
+SLURM_NODEID=0
+SLURM_NNODES=1
+SLURM_LOCALID=0
+SLURM_LAUNCH_NODE_IPADDR=192.168.2.3
+SLURM_JOB_USER=caleb.greenstreet
+SLURM_JOB_UID=825005586
+SLURM_JOB_QOS=ugrad
+SLURM_JOB_PARTITION=non-gpu
+SLURM_JOB_NUM_NODES=1
+SLURM_JOB_NODELIST=n01-zeus
+SLURM_JOB_NAME=bash
+SLURM_JOB_ID=18871
+SLURM_JOB_GID=825005586
+SLURM_JOB_CPUS_PER_NODE=2
+SLURM_JOB_ACCOUNT=all
+SLURM_JOBID=18871
+SLURM_GTIDS=0
+SLURM_CPU_BIND_VERBOSE=quiet
+SLURM_CPU_BIND_TYPE=mask_cpu:
+SLURM_CPU_BIND_LIST=0x0200002000
+SLURM_CPU_BIND=quiet,mask_cpu:0x0200002000
+SLURM_CPUS_PER_TASK=2
+SLURM_CPUS_ON_NODE=2
+SLURM_CLUSTER_NAME=olympus
+SLURMD_NODENAME=n01-zeus
+SELINUX_USE_CURRENT_RANGE=
+SELINUX_ROLE_REQUESTED=
+SELINUX_LEVEL_REQUESTED=
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+OVA_UUM=0
+MODULESHOME=/usr/share/Modules
+MODULEPATH=/usr/share/Modules/modulefiles:/etc/modulefiles
+LOADEDMODULES=
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+KRB5CCNAME=FILE:/tmp/krb5cc_cdc825005586_rnAzPj
+HISTFILESIZE=10000
+HISTCONTROL=ignoredups
+DA_SESSION_ID_AUTH=983e7706-3c05-2240-8a24-a2fd0563f1e9
+CDC_PREW2KHOST=olympus
+CDC_LOCALHOST=olympus.engr.tamu.edu
+CDC_JOINED_ZONE=CN=Login_Nodes,CN=HPC,CN=Global,CN=Zones,OU=Centrify,OU=Services,DC=engr,DC=tamu,DC=edu
+CDC_JOINED_SITE=TAMU
+CDC_JOINED_DOMAIN=engr.tamu.edu
+CDC_JOINED_DC=ops3.engr.tamu.edu
+BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`_}
+0
+2
+1585810457 nextpc.v
+1585810773 nextpc_tb.v
+4
+0 
+1492228032 /opt/coe/synopsys/vcs-mx/L-2016.06-SP2-4/linux64/lib/libvirsim.so
+1492227340 /opt/coe/synopsys/vcs-mx/L-2016.06-SP2-4/linux64/lib/liberrorinf.so
+1492227298 /opt/coe/synopsys/vcs-mx/L-2016.06-SP2-4/linux64/lib/libsnpsmalloc.so
+1585810777 nextpcSim.daidir

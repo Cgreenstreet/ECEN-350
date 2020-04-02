@@ -1,0 +1,61 @@
+{
+    "stat": {
+        "ru_self_end": {
+            "ru_utime_sec": 0.082117999999999997,
+            "ru_stime_sec": 0.066288,
+            "ru_maxrss_kb": 64788,
+            "ru_majflt": 0,
+            "ru_minflt": 15805,
+            "ru_nivcsw": 48,
+            "ru_nvcsw": 227
+        },
+        "ru_childs_end": {
+            "ru_utime_sec": 0.0019810000000000001,
+            "ru_stime_sec": 0.0049540000000000001,
+            "ru_maxrss_kb": 19596,
+            "ru_majflt": 0,
+            "ru_minflt": 591,
+            "ru_nivcsw": 2,
+            "ru_nvcsw": 6
+        },
+        "peak_mem_kb": 266216
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.54/_6677_archive_1.a",
+            "objects": [
+                [
+                    "RwtTU_d.o",
+                    16176
+                ],
+                [
+                    "amcQwB.o",
+                    59293
+                ]
+            ],
+            "size": 75469
+        }
+    ],
+    "Modules": {
+        "...MASTER...": {},
+        "NextPClogicTest": {
+            "Compiled": "Yes",
+            "Compiled Times": 52
+        }
+    },
+    "CompUnits": {
+        "RwtTU_d": {
+            "mod": "NextPClogicTest",
+            "checksum": 0,
+            "out": "RwtTU_d.o",
+            "bytes": 16176,
+            "mode": 4,
+            "archive": "archive.54/_6677_archive_1.a"
+        }
+    },
+    "reusePaths": {
+        "amcQw_d": {
+            "icPath": "csrc"
+        }
+    }
+}

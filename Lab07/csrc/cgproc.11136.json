@@ -1,0 +1,61 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "ImmGeneratorTest": {
+            "Compiled": "Yes",
+            "Compiled Times": 4
+        }
+    },
+    "stat": {
+        "ru_self_end": {
+            "ru_utime_sec": 0.073185,
+            "ru_stime_sec": 0.068030999999999994,
+            "ru_majflt": 0,
+            "ru_maxrss_kb": 65100,
+            "ru_nvcsw": 219,
+            "ru_minflt": 15883,
+            "ru_nivcsw": 47
+        },
+        "ru_childs_end": {
+            "ru_utime_sec": 0.0,
+            "ru_stime_sec": 0.0062729999999999999,
+            "ru_majflt": 0,
+            "ru_maxrss_kb": 19500,
+            "ru_nvcsw": 6,
+            "ru_minflt": 590,
+            "ru_nivcsw": 2
+        },
+        "peak_mem_kb": 266232
+    },
+    "CompUnits": {
+        "jCshD_d": {
+            "checksum": 0,
+            "mod": "ImmGeneratorTest",
+            "out": "jCshD_d.o",
+            "archive": "archive.30/_11136_archive_1.a",
+            "bytes": 15569,
+            "mode": 4
+        }
+    },
+    "reusePaths": {
+        "amcQw_d": {
+            "icPath": "csrc"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.30/_11136_archive_1.a",
+            "objects": [
+                [
+                    "jCshD_d.o",
+                    15569
+                ],
+                [
+                    "amcQwB.o",
+                    59626
+                ]
+            ],
+            "size": 75195
+        }
+    ]
+}
