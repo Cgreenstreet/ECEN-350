@@ -8,7 +8,7 @@ VSRC=..
 TARGET_ARCH=
 
 # Choose name of executable 
-PRODUCTBASE=$(VSRC)/nextpcSim
+PRODUCTBASE=$(VSRC)/RegisterSim
 
 PRODUCT=$(PRODUCTBASE)
 
@@ -41,7 +41,7 @@ STRIPFLAGS=
 PRE_LDFLAGS= # Loader Flags
 LDFLAGS= -rdynamic 
 # Picarchive Flags
-PICLDFLAGS=-Wl,-rpath-link=./ -Wl,-rpath='$$ORIGIN'/nextpcSim.daidir/ -Wl,-rpath=./nextpcSim.daidir/ -Wl,-rpath='$$ORIGIN'/nextpcSim.daidir//scsim.db.dir 
+PICLDFLAGS=-Wl,-rpath-link=./ -Wl,-rpath='$$ORIGIN'/RegisterSim.daidir/ -Wl,-rpath=./RegisterSim.daidir/ -Wl,-rpath='$$ORIGIN'/RegisterSim.daidir//scsim.db.dir 
 
 # C run time startup
 CRT0=

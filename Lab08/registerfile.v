@@ -9,21 +9,10 @@ module RegisterFile(BusA, BusB, BusW, RA, RB, RW, RegWr, Clk);
 	input Clk;
 
 	reg [63:0] register [31:0]; // 64, 32-bit registers
-
-	
-
-
-	integer i;
-	initial begin
-		for(i = 0; i<32; i = i + 1)begin
-			register[i] <= 0; // clear registers to 0;
-		end
-	end
 	
 
 	always@(negedge Clk) begin
-		register[31] <= 0; // register 31 is always 0
-	
+		
 	if(RegWr)begin
 		if(RW != 31)begin
 			register[RW] <= BusW;
@@ -31,7 +20,7 @@ module RegisterFile(BusA, BusB, BusW, RA, RB, RW, RegWr, Clk);
 	end
 	
 	end
-	assign BusA = register[RA]; // RA indices the registers value on BusA
-	assign BusB = register[RB]; // RB indices the registers value on BusB
+	assign BusA = (RA==31)?0:register[RA]; // RA indices the registers value on BusA
+	assign BusB = (RB==31)?0:register[RB];// RB indices the registers value on BusB
 endmodule
 		

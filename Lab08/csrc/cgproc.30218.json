@@ -1,0 +1,61 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "RegisterFileTest_v": {
+            "Compiled": "Yes",
+            "Compiled Times": 3
+        }
+    },
+    "CompUnits": {
+        "SK7WZ_d": {
+            "bytes": 48084,
+            "mod": "RegisterFileTest_v",
+            "out": "SK7WZ_d.o",
+            "mode": 4,
+            "checksum": 0,
+            "archive": "archive.57/_30218_archive_1.a"
+        }
+    },
+    "reusePaths": {
+        "amcQw_d": {
+            "icPath": "csrc"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.57/_30218_archive_1.a",
+            "objects": [
+                [
+                    "SK7WZ_d.o",
+                    48084
+                ],
+                [
+                    "amcQwB.o",
+                    67694
+                ]
+            ],
+            "size": 115778
+        }
+    ],
+    "stat": {
+        "ru_childs_end": {
+            "ru_utime_sec": 0.0018550000000000001,
+            "ru_nivcsw": 2,
+            "ru_stime_sec": 0.0055669999999999999,
+            "ru_nvcsw": 6,
+            "ru_minflt": 591,
+            "ru_maxrss_kb": 19884,
+            "ru_majflt": 0
+        },
+        "ru_self_end": {
+            "ru_utime_sec": 0.12914300000000001,
+            "ru_nivcsw": 48,
+            "ru_stime_sec": 0.054636999999999998,
+            "ru_nvcsw": 209,
+            "ru_minflt": 16157,
+            "ru_maxrss_kb": 66168,
+            "ru_majflt": 0
+        },
+        "peak_mem_kb": 266212
+    }
+}

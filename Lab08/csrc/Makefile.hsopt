@@ -41,4 +41,4 @@ include filelist.hsopt
 
 
 rmapats.so: $(HSOPT_OBJS)
-	@$(VCS_CC) $(LDFLAGS) $(LIBS) -shared -o ./../nextpcSim.daidir/rmapats.so $(HSOPT_OBJS)
+	@$(VCS_CC) $(LDFLAGS) $(LIBS) -shared -o ./../RegisterSim.daidir/rmapats.so $(HSOPT_OBJS)
