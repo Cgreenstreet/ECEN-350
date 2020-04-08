@@ -33,13 +33,27 @@ module singlecycle(
     // Register file connections
     wire [63:0] regoutA;     // Output A
     wire [63:0] regoutB;     // Output B
+    wire [63:0] reginW;	     // Input W
 
     // ALU connections
     wire [63:0] aluout;
     wire zero;
+    wire [3:0] ALUOp;
 
     // Immediate generator connections
-    wire [63:0] extimm;
+    wire [63:0] extimm; 
+    wire [25:0] imm;
+
+    // Data memory connections
+    wire [63:0] DmemOut;
+
+
+    NextPClogic nextPC(.NextPC(nextpc),
+		        .CurrentPC(currentpc),
+			.SignExtImm64(extimm),
+			.Branch(branch),
+			.ALUZero(zero),
+			.Uncondbranch(uncond_branch));
 
     // PC update logic
     always @(negedge CLK)
@@ -79,6 +93,43 @@ module singlecycle(
     * Connect the remaining datapath elements below.
     * Do not forget any additional multiplexers that may be required.
     */
+
+	
+    //REGISTER FILE
+    RegisterFile registers(.BusA(regoutA), 
+	.BusB(regoutB),
+	.BusW(reginW),
+	.RA(rn),
+	.RB(rb),
+	.RW(rd),
+	.RegWr(RegWrite),
+	.Clk(CLK));
+   	
+	
+    // IMMEDIATE GENERATOR
+    ImmGenerator ImmGen(.Imm64(extimm), .Imm26(imm), .Ctrl(signop));
+	
+	
+    // ALUSrc MUX
+    assign ALUSrc = (alusrc ? extimm : regoutB); 
+    
+    // ALU
+    alu ALU(.busW(aluout), 
+	    .zero(zero),
+	    .busA(regoutA),
+	    .busB(ALUSrc),
+	    .ctrl(ALUOp));
+
+    //DATA MEMORY
+    DataMemory data(.ReadData(DmemOut),
+	  	    .Address(aluout),
+		    .WriteData(regoutB),
+		    .MemoryRead(memread),
+		    .MemoryWrite(memwrite),
+		    .Clock(CLK));
+
+    // MemToReg MUX
+    assign reginW = (mem2reg ? DmemOut : aluout);
 
 
 
