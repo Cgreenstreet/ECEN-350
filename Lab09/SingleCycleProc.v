@@ -16,7 +16,10 @@ module singlecycle(
     wire [4:0] rd;            // The destination register
     wire [4:0] rm;            // Operand 1
     wire [4:0] rn;            // Operand 2
+   // wire [5:0] shamt;
     wire [10:0] opcode;
+
+   
 
     // Control wires
     wire reg2loc;
@@ -37,8 +40,8 @@ module singlecycle(
 
     // ALU connections
     wire [63:0] aluout;
+    wire [63:0] aluin;
     wire zero;
-    wire [3:0] ALUOp;
 
     // Immediate generator connections
     wire [63:0] extimm; 
@@ -48,12 +51,16 @@ module singlecycle(
     wire [63:0] DmemOut;
 
 
-    NextPClogic nextPC(.NextPC(nextpc),
+    NextPCLogic nextPC(.NextPC(nextpc),
 		        .CurrentPC(currentpc),
 			.SignExtImm64(extimm),
 			.Branch(branch),
 			.ALUZero(zero),
 			.Uncondbranch(uncond_branch));
+     InstructionMemory imem(
+        .Data(instruction),
+        .Address(currentpc)
+    );
 
     // PC update logic
     always @(negedge CLK)
@@ -66,14 +73,12 @@ module singlecycle(
 
     // Parts of instruction
     assign rd = instruction[4:0];
-    assign rm = instruction[9:5];
-    assign rn = reg2loc ? instruction[4:0] : instruction[20:16];
+    assign rn = instruction[9:5];
+    assign rm = reg2loc ? instruction[4:0] : instruction[20:16];
     assign opcode = instruction[31:21];
+    assign imm = instruction[25:0];
 
-    InstructionMemory imem(
-        .Data(instruction),
-        .Address(currentpc)
-    );
+   
 
     control control(
         .reg2loc(reg2loc),
@@ -100,9 +105,9 @@ module singlecycle(
 	.BusB(regoutB),
 	.BusW(reginW),
 	.RA(rn),
-	.RB(rb),
+	.RB(rm),
 	.RW(rd),
-	.RegWr(RegWrite),
+	.RegWr(regwrite),
 	.Clk(CLK));
    	
 	
@@ -111,14 +116,14 @@ module singlecycle(
 	
 	
     // ALUSrc MUX
-    assign ALUSrc = (alusrc ? extimm : regoutB); 
+    assign aluin = alusrc ? extimm : regoutB; 
     
     // ALU
     alu ALU(.busW(aluout), 
 	    .zero(zero),
 	    .busA(regoutA),
-	    .busB(ALUSrc),
-	    .ctrl(ALUOp));
+	    .busB(aluin),
+	    .ctrl(aluctrl));
 
     //DATA MEMORY
     DataMemory data(.ReadData(DmemOut),
@@ -129,7 +134,7 @@ module singlecycle(
 		    .Clock(CLK));
 
     // MemToReg MUX
-    assign reginW = (mem2reg ? DmemOut : aluout);
+    assign reginW = mem2reg ? DmemOut : aluout;
 
 
 

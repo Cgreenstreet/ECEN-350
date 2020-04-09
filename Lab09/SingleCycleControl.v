@@ -82,30 +82,30 @@ begin
             signop        <= 2'bxx;
  	    end
 	`OPCODE_ADDIMM:  begin
-	    reg2loc       <= 1'bx;
-            alusrc        <= 1'bx;
-            mem2reg       <= 1'bx;
-            regwrite      <= 1'b0;
+	    reg2loc       <= 1'b1;
+            alusrc        <= 1'b1;
+            mem2reg       <= 1'b0;
+            regwrite      <= 1'b1;
             memread       <= 1'b0;
             memwrite      <= 1'b0;
             branch        <= 1'b0;
             uncond_branch <= 1'b0;
-            aluop         <= 4'bxxxx;
+            aluop         <= 4'b0010;
             signop        <= 2'b00; 
 	    end
 	`OPCODE_SUBIMM: begin 
-	    reg2loc       <= 1'bx;
-            alusrc        <= 1'bx;
-            mem2reg       <= 1'bx;
-            regwrite      <= 1'b0;
+	    reg2loc       <= 1'b1;
+            alusrc        <= 1'b1;
+            mem2reg       <= 1'b0;
+            regwrite      <= 1'b1;
             memread       <= 1'b0;
             memwrite      <= 1'b0;
             branch        <= 1'b0;
             uncond_branch <= 1'b0;
-            aluop         <= 4'bxxxx;
+            aluop         <= 4'b0110;
             signop        <= 2'b00;
 	    end
-	`OPCODE_MOVZ:   begin 
+	/*`OPCODE_MOVZ:   begin 
 	    reg2loc       <= 1'bx;
             alusrc        <= 1'bx;
             mem2reg       <= 1'bx;
@@ -116,7 +116,7 @@ begin
             uncond_branch <= 1'b0;
             aluop         <= 4'bxxxx;
             signop        <= 2'bxx;
-	    end
+	    end*/
 	`OPCODE_B:     begin 
 	    reg2loc       <= 1'bx;
             alusrc        <= 1'bx;
