@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module ImmGenerator(Imm64, Imm26, Ctrl);
    output reg [63:0] Imm64;
    input [25:0]  Imm26;
@@ -24,6 +25,9 @@ module ImmGenerator(Imm64, Imm26, Ctrl);
 	if(Ctrl[1:0] == 2'b11)begin // Cond. Branch
 	  Imm64 = {{45{Imm26[23]}}, Imm26[23:5]};
 	end
+	/*if(Ctrl[2:0] == 3'b010)begin // IW-Type
+	  Imm64 = {48'b0, Imm26[20:5]};
+	end*/
 	if(Ctrl[1:0] == 2'bxx)begin 
           Imm64 = {64'bx};
         end

@@ -76,7 +76,7 @@ module DataMemory(ReadData , Address , WriteData , MemoryRead , MemoryWrite , Cl
             memBank[Address+6] <= #20 WriteData[15:8];
             memBank[Address+7] <= #20 WriteData[7:0];
             // Could be useful for debugging:
-            // $display("Writing Address:%h Data:%h",Address, WriteData);
+             $display("Writing Address:%h Data:%h",Address, WriteData);
         end
     end
 endmodule

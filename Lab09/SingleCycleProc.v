@@ -1,3 +1,12 @@
+`include "alu.v"
+`include "DataMemory.v"
+`include "ImmGenerator.v"
+`include "nextpc.v"
+`include "InstructionMemory.v"
+`include "registerfile.v"
+`include "SingleCycleControl.v"
+`timescale 1ns / 1ps
+
 module singlecycle(
     input resetl,
     input [63:0] startpc,
@@ -47,9 +56,6 @@ module singlecycle(
     wire [63:0] extimm; 
     wire [25:0] imm;
 
-    // Data memory connections
-    wire [63:0] DmemOut;
-
 
     NextPCLogic nextPC(.NextPC(nextpc),
 		        .CurrentPC(currentpc),
@@ -65,10 +71,10 @@ module singlecycle(
     // PC update logic
     always @(negedge CLK)
     begin
-        if (resetl)
-            currentpc <= nextpc;
-        else
+        if (~resetl)
             currentpc <= startpc;
+        else
+            currentpc <= nextpc;
     end
 
     // Parts of instruction
@@ -80,7 +86,7 @@ module singlecycle(
 
    
 
-    control control(
+    SingleCycleControl control(
         .reg2loc(reg2loc),
         .alusrc(alusrc),
         .mem2reg(mem2reg),
@@ -126,7 +132,7 @@ module singlecycle(
 	    .ctrl(aluctrl));
 
     //DATA MEMORY
-    DataMemory data(.ReadData(DmemOut),
+    DataMemory data(.ReadData(dmemout),
 	  	    .Address(aluout),
 		    .WriteData(regoutB),
 		    .MemoryRead(memread),
@@ -134,7 +140,7 @@ module singlecycle(
 		    .Clock(CLK));
 
     // MemToReg MUX
-    assign reginW = mem2reg ? DmemOut : aluout;
+    assign reginW = mem2reg ? dmemout : aluout;
 
 
 

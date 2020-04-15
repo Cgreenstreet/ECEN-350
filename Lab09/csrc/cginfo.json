@@ -1,34 +1,91 @@
 {
-    "Misc": {
-        "archive_dir": "archive.13",
-        "daidir_abs": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab09/SingleCycleSIM.daidir",
-        "csrc_abs": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab09/csrc",
-        "cwd": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab09",
-        "default_output_dir": "csrc",
-        "csrc": "csrc",
-        "daidir": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab09/SingleCycleSIM.daidir"
-    },
     "MlibObjs": {},
+    "stat": {
+        "peak_mem_kb": 267056,
+        "totalObjSize": 115641,
+        "mop/quad": 3.058449074074074,
+        "ru_self_cgstart": {
+            "ru_majflt": 0,
+            "ru_utime_sec": 0.096833000000000002,
+            "ru_stime_sec": 0.056397000000000003,
+            "ru_maxrss_kb": 63680,
+            "ru_nvcsw": 218,
+            "ru_minflt": 14679,
+            "ru_nivcsw": 59
+        },
+        "nQuads": 1728,
+        "outputSizePerQuad": 66.0,
+        "ru_childs_cgstart": {
+            "ru_majflt": 0,
+            "ru_utime_sec": 0.0,
+            "ru_stime_sec": 0.0,
+            "ru_maxrss_kb": 0,
+            "ru_nvcsw": 0,
+            "ru_minflt": 0,
+            "ru_nivcsw": 0
+        },
+        "nMops": 5285,
+        "ru_self_end": {
+            "ru_majflt": 0,
+            "ru_utime_sec": 0.154617,
+            "ru_stime_sec": 0.076774999999999996,
+            "ru_maxrss_kb": 70296,
+            "ru_nvcsw": 313,
+            "ru_minflt": 17344,
+            "ru_nivcsw": 63
+        },
+        "ru_childs_end": {
+            "ru_majflt": 0,
+            "ru_utime_sec": 0.000852,
+            "ru_stime_sec": 0.0068209999999999998,
+            "ru_maxrss_kb": 21928,
+            "ru_nvcsw": 5,
+            "ru_minflt": 590,
+            "ru_nivcsw": 2
+        },
+        "mopSpeed": 91461.304167243521,
+        "quadSpeed": 29904.471826111032,
+        "CodeGen(%)": 37.372345861063145,
+        "Frontend(%)": 62.627654138936862
+    },
     "PrevCompiledModules": {
+        "SingleCycleProcTest_v": {
+            "keWLg_d": {
+                "bytes": 52796,
+                "archive": "archive.29/_25190_archive_1.a",
+                "mod": "SingleCycleProcTest_v",
+                "out": "keWLg_d.o",
+                "mode": 4,
+                "checksum": 0
+            }
+        },
         "...MASTER...": {
             "amcQw_d": {
-                "mode": 4,
                 "bytes": 7291,
                 "mod": "...MASTER...",
+                "mode": 4,
                 "checksum": 0,
                 "out": "objs/amcQw_d.o"
             }
-        },
-        "SingleCycleProcTest_v": {
-            "keWLg_d": {
-                "mode": 4,
-                "bytes": 51640,
-                "mod": "SingleCycleProcTest_v",
-                "out": "keWLg_d.o",
-                "checksum": 0,
-                "archive": "archive.13/_4328_archive_1.a"
-            }
         }
+    },
+    "NameTable": {
+        "SingleCycleProcTest_v": [
+            "SingleCycleProcTest_v",
+            "keWLg",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CompileStrategy": "fullobj",
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 62845,
+        "archive": "archive.29/_25190_archive_1.a"
     },
     "CurCompileUdps": {},
     "CurCompileModules": [
@@ -36,78 +93,21 @@
         "SingleCycleProcTest_v",
         "SingleCycleProcTest_v"
     ],
-    "NameTable": {
-        "...MASTER...": [
-            "SIM",
-            "amcQw",
-            "module"
-        ],
-        "SingleCycleProcTest_v": [
-            "SingleCycleProcTest_v",
-            "keWLg",
-            "module"
-        ]
-    },
-    "CompileStrategy": "fullobj",
-    "stat": {
-        "ru_self_cgstart": {
-            "ru_utime_sec": 0.087045999999999998,
-            "ru_stime_sec": 0.070305999999999993,
-            "ru_nvcsw": 317,
-            "ru_maxrss_kb": 62792,
-            "ru_minflt": 14456,
-            "ru_majflt": 0,
-            "ru_nivcsw": 45
-        },
-        "ru_childs_cgstart": {
-            "ru_utime_sec": 0.0,
-            "ru_stime_sec": 0.0,
-            "ru_nvcsw": 0,
-            "ru_maxrss_kb": 0,
-            "ru_minflt": 0,
-            "ru_majflt": 0,
-            "ru_nivcsw": 0
-        },
-        "totalObjSize": 114550,
-        "nQuads": 1747,
-        "nMops": 5488,
-        "Frontend(%)": 57.018773499626626,
-        "outputSizePerQuad": 65.0,
-        "ru_self_end": {
-            "ru_utime_sec": 0.15266199999999999,
-            "ru_stime_sec": 0.082682000000000005,
-            "ru_nvcsw": 413,
-            "ru_maxrss_kb": 69664,
-            "ru_minflt": 17158,
-            "ru_majflt": 0,
-            "ru_nivcsw": 49
-        },
-        "ru_childs_end": {
-            "ru_utime_sec": 0.0,
-            "ru_stime_sec": 0.0074910000000000003,
-            "ru_nvcsw": 5,
-            "ru_maxrss_kb": 21064,
-            "ru_minflt": 590,
-            "ru_majflt": 0,
-            "ru_nivcsw": 2
-        },
-        "mopSpeed": 83638.137039746405,
-        "quadSpeed": 26624.603755181666,
-        "mop/quad": 3.1413852318259874,
-        "CodeGen(%)": 42.981226500373374,
-        "peak_mem_kb": 266884
-    },
-    "SIMBData": {
-        "out": "amcQwB.o",
-        "bytes": 62828,
-        "archive": "archive.13/_4328_archive_1.a"
-    },
+    "CompileProcesses": [
+        "cgproc.25190.json"
+    ],
     "LVLData": [
         "SIM"
     ],
     "PEModules": [],
-    "CompileProcesses": [
-        "cgproc.4328.json"
-    ],
+    "Misc": {
+        "csrc_abs": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab09/csrc",
+        "cwd": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab09",
+        "archive_dir": "archive.29",
+        "csrc": "csrc",
+        "daidir": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab09/SingleCycleMOVSIM.daidir",
+        "daidir_abs": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab09/SingleCycleMOVSIM.daidir",
+        "default_output_dir": "csrc"
+    },
     "CompileStatus": "Successful"
 }

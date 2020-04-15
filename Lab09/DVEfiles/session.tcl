@@ -1,11 +1,14 @@
 # Begin_DVE_Session_Save_Info
 # DVE full session
-# Saved on Wed Apr 8 23:58:43 2020
+# Saved on Wed Apr 15 13:55:56 2020
 # Designs open: 1
 #   Sim: /home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab09/SingleCycleSIM
-# Toplevel windows open: 1
+# Toplevel windows open: 2
 # 	TopLevel.1
-#   Group count = 0
+# 	TopLevel.2
+#   Source.1: SingleCycleProcTest_v
+#   Group count = 1
+#   Group SingleCycleProcTest_v signal count = 7
 # End_DVE_Session_Save_Info
 
 # DVE version: L-2016.06-SP2-4_Full64
@@ -64,7 +67,7 @@ if {![gui_exist_window -window TopLevel.1]} {
 } else { 
     set TopLevel.1 TopLevel.1
 }
-gui_show_window -window ${TopLevel.1} -show_state normal -rect {{0 0} {1266 1327}}
+gui_show_window -window ${TopLevel.1} -show_state normal -rect {{0 0} {1265 1326}}
 
 # ToolBar settings
 gui_set_toolbar_attributes -toolbar {TimeOperations} -dock_state top
@@ -111,23 +114,23 @@ gui_show_toolbar -toolbar {Testbench}
 # End ToolBar settings
 
 # Docked window settings
-set HSPane.1 [gui_create_window -type HSPane -parent ${TopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 162]
+set HSPane.1 [gui_create_window -type HSPane -parent ${TopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 161]
 catch { set Hier.1 [gui_share_window -id ${HSPane.1} -type Hier] }
-gui_set_window_pref_key -window ${HSPane.1} -key dock_width -value_type integer -value 162
+gui_set_window_pref_key -window ${HSPane.1} -key dock_width -value_type integer -value 161
 gui_set_window_pref_key -window ${HSPane.1} -key dock_height -value_type integer -value -1
 gui_set_window_pref_key -window ${HSPane.1} -key dock_offset -value_type integer -value 0
-gui_update_layout -id ${HSPane.1} {{left 0} {top 0} {width 161} {height 1062} {dock_state left} {dock_on_new_line true} {child_hier_colhier 140} {child_hier_coltype 100} {child_hier_colpd 0} {child_hier_col1 0} {child_hier_col2 1} {child_hier_col3 -1}}
-set DLPane.1 [gui_create_window -type DLPane -parent ${TopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 251]
+gui_update_layout -id ${HSPane.1} {{left 0} {top 0} {width 160} {height 1062} {dock_state left} {dock_on_new_line true} {child_hier_colhier 140} {child_hier_coltype 100} {child_hier_colpd 0} {child_hier_col1 0} {child_hier_col2 1} {child_hier_col3 -1}}
+set DLPane.1 [gui_create_window -type DLPane -parent ${TopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 250]
 catch { set Data.1 [gui_share_window -id ${DLPane.1} -type Data] }
-gui_set_window_pref_key -window ${DLPane.1} -key dock_width -value_type integer -value 251
+gui_set_window_pref_key -window ${DLPane.1} -key dock_width -value_type integer -value 250
 gui_set_window_pref_key -window ${DLPane.1} -key dock_height -value_type integer -value 951
 gui_set_window_pref_key -window ${DLPane.1} -key dock_offset -value_type integer -value 0
-gui_update_layout -id ${DLPane.1} {{left 0} {top 0} {width 250} {height 1062} {dock_state left} {dock_on_new_line true} {child_data_colvariable 140} {child_data_colvalue 100} {child_data_coltype 40} {child_data_col1 0} {child_data_col2 1} {child_data_col3 2}}
-set Console.1 [gui_create_window -type Console -parent ${TopLevel.1} -dock_state bottom -dock_on_new_line true -dock_extent 167]
-gui_set_window_pref_key -window ${Console.1} -key dock_width -value_type integer -value 1267
-gui_set_window_pref_key -window ${Console.1} -key dock_height -value_type integer -value 167
+gui_update_layout -id ${DLPane.1} {{left 0} {top 0} {width 249} {height 1062} {dock_state left} {dock_on_new_line true} {child_data_colvariable 140} {child_data_colvalue 100} {child_data_coltype 40} {child_data_col1 0} {child_data_col2 1} {child_data_col3 2}}
+set Console.1 [gui_create_window -type Console -parent ${TopLevel.1} -dock_state bottom -dock_on_new_line true -dock_extent 166]
+gui_set_window_pref_key -window ${Console.1} -key dock_width -value_type integer -value 1266
+gui_set_window_pref_key -window ${Console.1} -key dock_height -value_type integer -value 166
 gui_set_window_pref_key -window ${Console.1} -key dock_offset -value_type integer -value 0
-gui_update_layout -id ${Console.1} {{left 0} {top 0} {width 1266} {height 166} {dock_state bottom} {dock_on_new_line true}}
+gui_update_layout -id ${Console.1} {{left 0} {top 0} {width 1265} {height 165} {dock_state bottom} {dock_on_new_line true}}
 #### Start - Readjusting docked view's offset / size
 set dockAreaList { top left right bottom }
 foreach dockArea $dockAreaList {
@@ -148,6 +151,71 @@ foreach dockArea $dockAreaList {
 #### End - Readjusting docked view's offset / size
 gui_sync_global -id ${TopLevel.1} -option true
 
+# MDI window settings
+set Source.1 [gui_create_window -type {Source}  -parent ${TopLevel.1}]
+gui_show_window -window ${Source.1} -show_state maximized
+gui_update_layout -id ${Source.1} {{show_state maximized} {dock_state undocked} {dock_on_new_line false}}
+
+# End MDI window settings
+
+
+# Create and position top-level window: TopLevel.2
+
+if {![gui_exist_window -window TopLevel.2]} {
+    set TopLevel.2 [ gui_create_window -type TopLevel \
+       -icon $::env(DVE)/auxx/gui/images/toolbars/dvewin.xpm] 
+} else { 
+    set TopLevel.2 TopLevel.2
+}
+gui_show_window -window ${TopLevel.2} -show_state normal -rect {{263 66} {1542 1007}}
+
+# ToolBar settings
+gui_set_toolbar_attributes -toolbar {TimeOperations} -dock_state top
+gui_set_toolbar_attributes -toolbar {TimeOperations} -offset 0
+gui_show_toolbar -toolbar {TimeOperations}
+gui_hide_toolbar -toolbar {&File}
+gui_set_toolbar_attributes -toolbar {&Edit} -dock_state top
+gui_set_toolbar_attributes -toolbar {&Edit} -offset 0
+gui_show_toolbar -toolbar {&Edit}
+gui_hide_toolbar -toolbar {CopyPaste}
+gui_set_toolbar_attributes -toolbar {&Trace} -dock_state top
+gui_set_toolbar_attributes -toolbar {&Trace} -offset 0
+gui_show_toolbar -toolbar {&Trace}
+gui_hide_toolbar -toolbar {TraceInstance}
+gui_hide_toolbar -toolbar {BackTrace}
+gui_set_toolbar_attributes -toolbar {&Scope} -dock_state top
+gui_set_toolbar_attributes -toolbar {&Scope} -offset 0
+gui_show_toolbar -toolbar {&Scope}
+gui_set_toolbar_attributes -toolbar {&Window} -dock_state top
+gui_set_toolbar_attributes -toolbar {&Window} -offset 0
+gui_show_toolbar -toolbar {&Window}
+gui_set_toolbar_attributes -toolbar {Signal} -dock_state top
+gui_set_toolbar_attributes -toolbar {Signal} -offset 0
+gui_show_toolbar -toolbar {Signal}
+gui_set_toolbar_attributes -toolbar {Zoom} -dock_state top
+gui_set_toolbar_attributes -toolbar {Zoom} -offset 0
+gui_show_toolbar -toolbar {Zoom}
+gui_set_toolbar_attributes -toolbar {Zoom And Pan History} -dock_state top
+gui_set_toolbar_attributes -toolbar {Zoom And Pan History} -offset 0
+gui_show_toolbar -toolbar {Zoom And Pan History}
+gui_set_toolbar_attributes -toolbar {Grid} -dock_state top
+gui_set_toolbar_attributes -toolbar {Grid} -offset 0
+gui_show_toolbar -toolbar {Grid}
+gui_set_toolbar_attributes -toolbar {Simulator} -dock_state top
+gui_set_toolbar_attributes -toolbar {Simulator} -offset 0
+gui_show_toolbar -toolbar {Simulator}
+gui_set_toolbar_attributes -toolbar {Interactive Rewind} -dock_state top
+gui_set_toolbar_attributes -toolbar {Interactive Rewind} -offset 0
+gui_show_toolbar -toolbar {Interactive Rewind}
+gui_set_toolbar_attributes -toolbar {Testbench} -dock_state top
+gui_set_toolbar_attributes -toolbar {Testbench} -offset 0
+gui_show_toolbar -toolbar {Testbench}
+
+# End ToolBar settings
+
+# Docked window settings
+gui_sync_global -id ${TopLevel.2} -option true
+
 gui_set_env TOPLEVELS::TARGET_FRAME(Source) ${TopLevel.1}
 gui_set_env TOPLEVELS::TARGET_FRAME(Schematic) ${TopLevel.1}
 gui_set_env TOPLEVELS::TARGET_FRAME(PathSchematic) ${TopLevel.1}
@@ -156,6 +224,7 @@ gui_set_env TOPLEVELS::TARGET_FRAME(List) none
 gui_set_env TOPLEVELS::TARGET_FRAME(Memory) ${TopLevel.1}
 gui_set_env TOPLEVELS::TARGET_FRAME(DriverLoad) none
 gui_update_statusbar_target_frame ${TopLevel.1}
+gui_update_statusbar_target_frame ${TopLevel.2}
 
 #</WindowLayout>
 
@@ -190,7 +259,14 @@ gui_set_time_units 1ps
 # Global: Signal Compare
 
 # Global: Signal Groups
+gui_load_child_values {SingleCycleProcTest_v}
 
+
+set _session_group_1 SingleCycleProcTest_v
+gui_sg_create "$_session_group_1"
+set SingleCycleProcTest_v "$_session_group_1"
+
+gui_sg_addsignal -group "$_session_group_1" { SingleCycleProcTest_v.currentPC SingleCycleProcTest_v.passed SingleCycleProcTest_v.watchdog SingleCycleProcTest_v.Reset_L SingleCycleProcTest_v.startPC SingleCycleProcTest_v.CLK SingleCycleProcTest_v.dMemOut }
 
 # Global: Highlighting
 
@@ -200,7 +276,7 @@ gui_change_stack_mode -mode list
 # Post database loading setting...
 
 # Restore C1 time
-gui_set_time -C1_only 0
+gui_set_time -C1_only 240000
 
 
 
@@ -225,23 +301,32 @@ gui_list_set_filter -id ${Hier.1} -list { {Package 1} {All 0} {Process 1} {VirtP
 gui_list_set_filter -id ${Hier.1} -text {*}
 gui_hier_list_init -id ${Hier.1}
 gui_change_design -id ${Hier.1} -design Sim
-catch {gui_list_select -id ${Hier.1} {SingleCycleProcTest_v}}
 gui_view_scroll -id ${Hier.1} -vertical -set 0
 gui_view_scroll -id ${Hier.1} -horizontal -set 0
 
 # Data 'Data.1'
 gui_list_set_filter -id ${Data.1} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {LowPower 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
 gui_list_set_filter -id ${Data.1} -text {*}
-gui_list_show_data -id ${Data.1} {SingleCycleProcTest_v}
 gui_view_scroll -id ${Data.1} -vertical -set 0
 gui_view_scroll -id ${Data.1} -horizontal -set 0
 gui_view_scroll -id ${Hier.1} -vertical -set 0
 gui_view_scroll -id ${Hier.1} -horizontal -set 0
+
+# Source 'Source.1'
+gui_src_value_annotate -id ${Source.1} -switch false
+gui_set_env TOGGLE::VALUEANNOTATE 0
+gui_open_source -id ${Source.1}  -replace -active SingleCycleProcTest_v /home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab09/SingleCycleProcTest.v
+gui_view_scroll -id ${Source.1} -vertical -set 105
+gui_src_set_reusable -id ${Source.1}
 # Restore toplevel window zorder
 # The toplevel window could be closed if it has no view/pane
+if {[gui_exist_window -window ${TopLevel.2}]} {
+	gui_set_active_window -window ${TopLevel.2}
+}
 if {[gui_exist_window -window ${TopLevel.1}]} {
 	gui_set_active_window -window ${TopLevel.1}
-	gui_set_active_window -window ${DLPane.1}
+	gui_set_active_window -window ${Source.1}
+	gui_set_active_window -window ${HSPane.1}
 }
 #</Session>
 

@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 `define OPCODE_ANDREG 11'b?0001010???
 `define OPCODE_ORRREG 11'b?0101010???
 `define OPCODE_ADDREG 11'b?0?01011???
@@ -14,7 +15,7 @@
 `define OPCODE_LDUR   11'b??111000010
 `define OPCODE_STUR   11'b??111000000
 
-module control(
+module SingleCycleControl(
     output reg reg2loc,
     output reg alusrc,
     output reg mem2reg,
@@ -28,12 +29,13 @@ module control(
     input [10:0] opcode
 );
 
-always @(*)
+always @(opcode)//*)
 begin
     casez (opcode)
 
         /* Add cases here for each instruction your processor supports */
-	`OPCODE_ANDREG:begin 
+	`OPCODE_ANDREG:
+	    begin 
 	    reg2loc       <= 1'b0;
             alusrc        <= 1'b0;
             mem2reg       <= 1'b0;
@@ -57,7 +59,8 @@ begin
             aluop         <= 4'b0001;
             signop        <= 2'bxx;
 	    end
-	`OPCODE_ADDREG: begin 
+	`OPCODE_ADDREG: 
+	    begin 
 	    reg2loc       <= 1'b0;
             alusrc        <= 1'b0;
             mem2reg       <= 1'b0;
@@ -69,7 +72,8 @@ begin
             aluop         <= 4'b0010;
             signop        <= 2'bxx;
 	    end
-	`OPCODE_SUBREG: begin 
+	`OPCODE_SUBREG: 
+	    begin 
 	    reg2loc       <= 1'b0;
             alusrc        <= 1'b0;
             mem2reg       <= 1'b0;
@@ -81,7 +85,8 @@ begin
             aluop         <= 4'b0110;
             signop        <= 2'bxx;
  	    end
-	`OPCODE_ADDIMM:  begin
+	`OPCODE_ADDIMM:  
+	    begin
 	    reg2loc       <= 1'b1;
             alusrc        <= 1'b1;
             mem2reg       <= 1'b0;
@@ -93,7 +98,8 @@ begin
             aluop         <= 4'b0010;
             signop        <= 2'b00; 
 	    end
-	`OPCODE_SUBIMM: begin 
+	`OPCODE_SUBIMM: 
+	    begin 
 	    reg2loc       <= 1'b1;
             alusrc        <= 1'b1;
             mem2reg       <= 1'b0;
@@ -105,19 +111,20 @@ begin
             aluop         <= 4'b0110;
             signop        <= 2'b00;
 	    end
-	/*`OPCODE_MOVZ:   begin 
-	    reg2loc       <= 1'bx;
-            alusrc        <= 1'bx;
-            mem2reg       <= 1'bx;
-            regwrite      <= 1'b0;
+/*	`OPCODE_MOVZ:   begin 
+	    reg2loc       <= 1'b1;
+            alusrc        <= 1'b1;
+            mem2reg       <= 1'b0;
+            regwrite      <= 1'b1;
             memread       <= 1'b0;
             memwrite      <= 1'b0;
             branch        <= 1'b0;
             uncond_branch <= 1'b0;
-            aluop         <= 4'bxxxx;
-            signop        <= 2'bxx;
-	    end*/
-	`OPCODE_B:     begin 
+            aluop         <= 4'b0011;
+            signop        <= 3'b010;
+	    end
+*/	`OPCODE_B:     
+	    begin 
 	    reg2loc       <= 1'bx;
             alusrc        <= 1'bx;
             mem2reg       <= 1'bx;
@@ -129,7 +136,8 @@ begin
             aluop         <= 4'bxxxx;
             signop        <= 2'b10;
 	    end
-	`OPCODE_CBZ:    begin 
+	`OPCODE_CBZ:    
+	    begin 
 	    reg2loc       <= 1'b1;
             alusrc        <= 1'b0;
             mem2reg       <= 1'bx;
@@ -141,7 +149,8 @@ begin
             aluop         <= 4'b0111;
             signop        <= 2'b11;
 	    end
-	`OPCODE_LDUR:   begin 
+	`OPCODE_LDUR:   
+ 	    begin 
 	    reg2loc       <= 1'bx;
             alusrc        <= 1'b1;
             mem2reg       <= 1'b1;
@@ -153,7 +162,8 @@ begin
             aluop         <= 4'b0010;
             signop        <= 2'b01;
 	    end
-	`OPCODE_STUR:   begin 
+	`OPCODE_STUR:  
+	    begin 
 	    reg2loc       <= 1'b1;
             alusrc        <= 1'b1;
             mem2reg       <= 1'bx;

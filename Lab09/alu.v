@@ -1,8 +1,11 @@
+`timescale 1ns / 1ps
+
 `define ALUOP_AND    4'b0000
 `define ALUOP_ORR    4'b0001
 `define ALUOP_ADD    4'b0010
 `define ALUOP_SUB    4'b0110
 `define ALUOP_PASSB  4'b0111
+`define ALUOP_MOVZ   4'b0011
 
 module alu(
     //output reg [63:0] busW,
@@ -23,6 +26,7 @@ assign subresults[`ALUOP_ORR   ] = busA | busB;
 assign subresults[`ALUOP_ADD   ] = busA + busB;
 assign subresults[`ALUOP_SUB   ] = busA - busB;
 assign subresults[`ALUOP_PASSB ] = busB;
+assign subresults[`ALUOP_MOVZ  ] = 1'b0 + busB;
 
 
 assign zero = (busW ? 1'b0 : 1'b1);

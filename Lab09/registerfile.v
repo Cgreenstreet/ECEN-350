@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module RegisterFile(BusA, BusB, BusW, RA, RB, RW, RegWr, Clk);
 	output [63:0] BusA;
 	output [63:0] BusB;

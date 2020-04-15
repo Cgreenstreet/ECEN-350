@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module NextPCLogic(
     output reg [63:0] NextPC,
     input      [63:0] CurrentPC,
