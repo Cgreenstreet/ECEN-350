@@ -1,0 +1,61 @@
+{
+    "stat": {
+        "ru_self_end": {
+            "ru_maxrss_kb": 69928,
+            "ru_utime_sec": 0.16214300000000001,
+            "ru_stime_sec": 0.098558000000000007,
+            "ru_minflt": 17253,
+            "ru_majflt": 0,
+            "ru_nvcsw": 411,
+            "ru_nivcsw": 63
+        },
+        "ru_childs_end": {
+            "ru_maxrss_kb": 21404,
+            "ru_utime_sec": 0.001,
+            "ru_stime_sec": 0.0080029999999999997,
+            "ru_minflt": 590,
+            "ru_majflt": 0,
+            "ru_nvcsw": 8,
+            "ru_nivcsw": 3
+        },
+        "peak_mem_kb": 267040
+    },
+    "Modules": {
+        "...MASTER...": {},
+        "SingleCycleProcTest_v": {
+            "Compiled Times": 37,
+            "Compiled": "Yes"
+        }
+    },
+    "CompUnits": {
+        "keWLg_d": {
+            "bytes": 55716,
+            "mod": "SingleCycleProcTest_v",
+            "out": "keWLg_d.o",
+            "mode": 4,
+            "archive": "archive.36/_22409_archive_1.a",
+            "checksum": 0
+        }
+    },
+    "reusePaths": {
+        "amcQw_d": {
+            "icPath": "csrc"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.36/_22409_archive_1.a",
+            "objects": [
+                [
+                    "keWLg_d.o",
+                    55716
+                ],
+                [
+                    "amcQwB.o",
+                    63533
+                ]
+            ],
+            "size": 119249
+        }
+    ]
+}

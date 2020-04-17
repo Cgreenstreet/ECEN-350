@@ -41,4 +41,4 @@ include filelist.hsopt
 
 
 rmapats.so: $(HSOPT_OBJS)
-	@$(VCS_CC) $(LDFLAGS) $(LIBS) -shared -o ./../SingleCycleMOVSIM.daidir/rmapats.so $(HSOPT_OBJS)
+	@$(VCS_CC) $(LDFLAGS) $(LIBS) -shared -o ./../SingleCycleSIM.daidir/rmapats.so $(HSOPT_OBJS)

@@ -61,10 +61,10 @@ module InstructionMemory(Data, Address);
         /* Add code for your tests here 
 	* 0x38: MOVZ X9, #0xdef0 // LSL 0
 	* 0x3C: MOVZ X10, #0x9abc // LSL 16
-	* 0x40: ORR X11, X9, X10 // X11 = 0x000009abcdef0
+	* 0x40: ADD X11, X9, X10 //ORR X11, X9, X10 // X11 = 0x000009abcdef0
 	* 0x44: MOVZ X9, #0x5678 // LSL 32
 	* 0x48: MOVZ X10, #0x1234 // LSL 48
-	* 0x4C: ORR X12, X9, X19 // X12 = 0x1234567800000000
+	* 0x4C: ADD X12, X9, X10 //ORR X12, X9, X19 // X12 = 0x1234567800000000
 	* 0x50: ORR X9, X11, X12 // X9 = 0x123456789abcdef0
 	* 0x54: ADD X0, XZR, XZR // X0 = 0
 	* 0x58: STUR X9, [X0, #0x28] // X9->X0
@@ -73,17 +73,21 @@ module InstructionMemory(Data, Address);
 
 	64'h038: Data = 32'hD29BDE09;
         64'h03c: Data = 32'hD2B3578A;
-        64'h040: Data = 32'hAA09014B;
+        64'h040: Data = 32'h8B09014B;//AA09014B;
         64'h044: Data = 32'hD2CACF09;
         64'h048: Data = 32'hD2E2468A;
-        64'h04c: Data = 32'hAA09014A;
+        64'h04c: Data = 32'h8B09014C;//AA09014A;
         64'h050: Data = 32'hAA0B0189;
         64'h054: Data = 32'h8B1F03E0;
         64'h058: Data = 32'hF8028009;
         64'h05c: Data = 32'hF842800A;
         
+	// ADD = 10001011000
+	// R-Format = {opcode[31:21], Rm[20:16], Shamt[15:10], Rn[9:5], Rd[4:0]}
 	
-
+//ADD X11, X9, X10 = 1000||1011||0000||1001||0000||0001||0100||1011 = 0x8B09014B
+//ADD X12, X9, X10 = 1000||1011||0000||1001||0000||0001||0100||1100 = 0x8B09014C
+//
 
         default: Data = 32'hXXXXXXXX;
         endcase

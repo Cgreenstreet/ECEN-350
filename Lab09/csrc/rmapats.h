@@ -2044,13 +2044,13 @@ static inline U asm_bsf (U in)
 #ifdef __cplusplus
 extern "C" {
 #endif
-void  hs_0_M_0_0__SingleCycleMOVSIM_daidir (UB  * pcode, vec32  * I935, U  I856);
-void  hs_0_M_0_6__SingleCycleMOVSIM_daidir (UB  * pcode, scalar  val, U  I957);
-void  hs_0_M_0_7__SingleCycleMOVSIM_daidir (UB  * pcode, vec32  * I1183, U  I957, U  I1192);
-void  hs_0_M_0_10__SingleCycleMOVSIM_daidir (UB  * pcode, vec32  * I935);
-void  hs_0_M_1_0__SingleCycleMOVSIM_daidir (UB  * pcode, vec32  * I935, U  I856);
-void  hs_0_M_2_0__SingleCycleMOVSIM_daidir (UB  * pcode, vec32  * I935, U  I856);
-void  hs_0_M_2_5__SingleCycleMOVSIM_daidir (UB  * pcode, U  I856);
+void  hs_0_M_0_0__SingleCycleSIM_daidir (UB  * pcode, vec32  * I935, U  I856);
+void  hs_0_M_0_6__SingleCycleSIM_daidir (UB  * pcode, scalar  val, U  I957);
+void  hs_0_M_0_7__SingleCycleSIM_daidir (UB  * pcode, vec32  * I1183, U  I957, U  I1192);
+void  hs_0_M_0_10__SingleCycleSIM_daidir (UB  * pcode, vec32  * I935);
+void  hs_0_M_1_0__SingleCycleSIM_daidir (UB  * pcode, vec32  * I935, U  I856);
+void  hs_0_M_2_0__SingleCycleSIM_daidir (UB  * pcode, vec32  * I935, U  I856);
+void  hs_0_M_2_5__SingleCycleSIM_daidir (UB  * pcode, U  I856);
 void  hsG_0__0 (struct dummyq_struct * I1106, EBLK  * I1107, U  I656);
 #ifdef __cplusplus
 }

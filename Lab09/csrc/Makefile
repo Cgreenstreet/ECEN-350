@@ -8,7 +8,7 @@ VSRC=..
 TARGET_ARCH=
 
 # Choose name of executable 
-PRODUCTBASE=$(VSRC)/SingleCycleMOVSIM
+PRODUCTBASE=$(VSRC)/SingleCycleSIM
 
 PRODUCT=$(PRODUCTBASE)
 
@@ -41,7 +41,7 @@ STRIPFLAGS=
 PRE_LDFLAGS= # Loader Flags
 LDFLAGS= -rdynamic 
 # Picarchive Flags
-PICLDFLAGS=-Wl,-rpath-link=./ -Wl,-rpath='$$ORIGIN'/SingleCycleMOVSIM.daidir/ -Wl,-rpath=./SingleCycleMOVSIM.daidir/ -Wl,-rpath='$$ORIGIN'/SingleCycleMOVSIM.daidir//scsim.db.dir 
+PICLDFLAGS=-Wl,-rpath-link=./ -Wl,-rpath='$$ORIGIN'/SingleCycleSIM.daidir/ -Wl,-rpath=./SingleCycleSIM.daidir/ -Wl,-rpath='$$ORIGIN'/SingleCycleSIM.daidir//scsim.db.dir 
 
 # C run time startup
 CRT0=

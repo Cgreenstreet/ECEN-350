@@ -1,37 +1,79 @@
 {
-    "Misc": {
-        "default_output_dir": "csrc",
-        "cwd": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab09",
-        "csrc": "csrc",
-        "daidir": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab09/SingleCycleMOVSIM.daidir",
-        "csrc_abs": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab09/csrc",
-        "archive_dir": "archive.35",
-        "daidir_abs": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab09/SingleCycleMOVSIM.daidir"
-    },
     "MlibObjs": {},
-    "CurCompileUdps": {},
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 63533,
+        "archive": "archive.36/_22409_archive_1.a"
+    },
     "PrevCompiledModules": {
         "SingleCycleProcTest_v": {
             "keWLg_d": {
-                "checksum": 0,
-                "bytes": 55358,
                 "mod": "SingleCycleProcTest_v",
-                "archive": "archive.35/_28514_archive_1.a",
+                "bytes": 55716,
                 "out": "keWLg_d.o",
-                "mode": 4
+                "mode": 4,
+                "archive": "archive.36/_22409_archive_1.a",
+                "checksum": 0
             }
         },
         "...MASTER...": {
             "amcQw_d": {
-                "checksum": 0,
-                "bytes": 7291,
                 "mod": "...MASTER...",
+                "bytes": 7291,
                 "mode": 4,
+                "checksum": 0,
                 "out": "objs/amcQw_d.o"
             }
         }
     },
-    "CompileStrategy": "fullobj",
+    "stat": {
+        "ru_self_cgstart": {
+            "ru_maxrss_kb": 63148,
+            "ru_utime_sec": 0.100591,
+            "ru_stime_sec": 0.072767999999999999,
+            "ru_minflt": 14553,
+            "ru_majflt": 0,
+            "ru_nvcsw": 296,
+            "ru_nivcsw": 59
+        },
+        "nQuads": 2615,
+        "totalObjSize": 119249,
+        "mop/quad": 3.3453154875717019,
+        "ru_childs_cgstart": {
+            "ru_maxrss_kb": 0,
+            "ru_utime_sec": 0.0,
+            "ru_stime_sec": 0.0,
+            "ru_minflt": 0,
+            "ru_majflt": 0,
+            "ru_nvcsw": 0,
+            "ru_nivcsw": 0
+        },
+        "nMops": 8748,
+        "mopSpeed": 142123.73277878863,
+        "ru_self_end": {
+            "ru_maxrss_kb": 69928,
+            "ru_utime_sec": 0.16214300000000001,
+            "ru_stime_sec": 0.099234000000000003,
+            "ru_minflt": 17259,
+            "ru_majflt": 0,
+            "ru_nvcsw": 414,
+            "ru_nivcsw": 63
+        },
+        "ru_childs_end": {
+            "ru_maxrss_kb": 21404,
+            "ru_utime_sec": 0.001,
+            "ru_stime_sec": 0.0080029999999999997,
+            "ru_minflt": 590,
+            "ru_majflt": 0,
+            "ru_nvcsw": 8,
+            "ru_nivcsw": 3
+        },
+        "CodeGen(%)": 37.96155245678198,
+        "quadSpeed": 42484.403431245119,
+        "outputSizePerQuad": 45.0,
+        "Frontend(%)": 62.038447543218027,
+        "peak_mem_kb": 267040
+    },
     "NameTable": {
         "SingleCycleProcTest_v": [
             "SingleCycleProcTest_v",
@@ -44,70 +86,28 @@
             "module"
         ]
     },
-    "stat": {
-        "ru_self_cgstart": {
-            "ru_nvcsw": 226,
-            "ru_stime_sec": 0.062736,
-            "ru_utime_sec": 0.093590000000000007,
-            "ru_maxrss_kb": 63432,
-            "ru_minflt": 14617,
-            "ru_majflt": 0,
-            "ru_nivcsw": 59
-        },
-        "nQuads": 1451,
-        "mopSpeed": 91016.200294550799,
-        "ru_childs_cgstart": {
-            "ru_nvcsw": 0,
-            "ru_stime_sec": 0.0,
-            "ru_utime_sec": 0.0,
-            "ru_maxrss_kb": 0,
-            "ru_minflt": 0,
-            "ru_majflt": 0,
-            "ru_nivcsw": 0
-        },
-        "ru_self_end": {
-            "ru_nvcsw": 324,
-            "ru_stime_sec": 0.086279999999999996,
-            "ru_utime_sec": 0.14791000000000001,
-            "ru_maxrss_kb": 70144,
-            "ru_minflt": 17322,
-            "ru_majflt": 0,
-            "ru_nivcsw": 63
-        },
-        "quadSpeed": 26712.076583210601,
-        "totalObjSize": 119265,
-        "nMops": 4944,
-        "ru_childs_end": {
-            "ru_nvcsw": 5,
-            "ru_stime_sec": 0.0064099999999999999,
-            "ru_utime_sec": 0.0010679999999999999,
-            "ru_maxrss_kb": 21680,
-            "ru_minflt": 591,
-            "ru_majflt": 0,
-            "ru_nivcsw": 2
-        },
-        "CodeGen(%)": 36.725035494557503,
-        "mop/quad": 3.4073053066850449,
-        "outputSizePerQuad": 82.0,
-        "Frontend(%)": 63.27496450544249,
-        "peak_mem_kb": 267040
-    },
-    "SIMBData": {
-        "archive": "archive.35/_28514_archive_1.a",
-        "out": "amcQwB.o",
-        "bytes": 63549
-    },
+    "CompileStrategy": "fullobj",
+    "CurCompileUdps": {},
+    "LVLData": [
+        "SIM"
+    ],
     "CurCompileModules": [
         "...MASTER...",
         "SingleCycleProcTest_v",
         "SingleCycleProcTest_v"
     ],
-    "LVLData": [
-        "SIM"
-    ],
-    "PEModules": [],
     "CompileStatus": "Successful",
+    "PEModules": [],
     "CompileProcesses": [
-        "cgproc.28514.json"
-    ]
+        "cgproc.22409.json"
+    ],
+    "Misc": {
+        "archive_dir": "archive.36",
+        "daidir_abs": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab09/SingleCycleSIM.daidir",
+        "cwd": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab09",
+        "csrc_abs": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab09/csrc",
+        "csrc": "csrc",
+        "daidir": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab09/SingleCycleSIM.daidir",
+        "default_output_dir": "csrc"
+    }
 }

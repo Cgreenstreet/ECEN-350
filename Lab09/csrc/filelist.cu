@@ -1,12 +1,12 @@
 PIC_LD=ld
 
 ARCHIVE_OBJS=
-ARCHIVE_OBJS += _28514_archive_1.so
-_28514_archive_1.so : archive.35/_28514_archive_1.a
+ARCHIVE_OBJS += _22409_archive_1.so
+_22409_archive_1.so : archive.36/_22409_archive_1.a
 	@$(AR) -s $<
-	@$(PIC_LD) -shared  -o .//../SingleCycleMOVSIM.daidir//_28514_archive_1.so --whole-archive $< --no-whole-archive
+	@$(PIC_LD) -shared  -o .//../SingleCycleSIM.daidir//_22409_archive_1.so --whole-archive $< --no-whole-archive
 	@rm -f $@
-	@ln -sf .//../SingleCycleMOVSIM.daidir//_28514_archive_1.so $@
+	@ln -sf .//../SingleCycleSIM.daidir//_22409_archive_1.so $@
 
 
 
@@ -20,9 +20,9 @@ VCS_OBJS0 =objs/amcQw_d.o
 	$(CC_CG) $(CFLAGS_CG) -c -o $@ $<
 
 $(VCS_ARC0) : $(VCS_OBJS0)
-	$(PIC_LD) -shared  -o .//../SingleCycleMOVSIM.daidir//$(VCS_ARC0) $(VCS_OBJS0)
+	$(PIC_LD) -shared  -o .//../SingleCycleSIM.daidir//$(VCS_ARC0) $(VCS_OBJS0)
 	rm -f $(VCS_ARC0)
-	@ln -sf .//../SingleCycleMOVSIM.daidir//$(VCS_ARC0) $(VCS_ARC0)
+	@ln -sf .//../SingleCycleSIM.daidir//$(VCS_ARC0) $(VCS_ARC0)
 
 CU_UDP_OBJS = \
 
