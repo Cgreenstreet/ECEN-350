@@ -1,0 +1,61 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "SingleCycleProcTest_v": {
+            "Compiled": "Yes",
+            "Compiled Times": 36
+        }
+    },
+    "CompUnits": {
+        "keWLg_d": {
+            "mod": "SingleCycleProcTest_v",
+            "archive": "archive.35/_28514_archive_1.a",
+            "out": "keWLg_d.o",
+            "checksum": 0,
+            "bytes": 55716,
+            "mode": 4
+        }
+    },
+    "reusePaths": {
+        "amcQw_d": {
+            "icPath": "csrc"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.35/_28514_archive_1.a",
+            "objects": [
+                [
+                    "keWLg_d.o",
+                    55716
+                ],
+                [
+                    "amcQwB.o",
+                    63549
+                ]
+            ],
+            "size": 119265
+        }
+    ],
+    "stat": {
+        "ru_self_end": {
+            "ru_nvcsw": 321,
+            "ru_stime_sec": 0.086057999999999996,
+            "ru_utime_sec": 0.14752799999999999,
+            "ru_maxrss_kb": 70144,
+            "ru_minflt": 17316,
+            "ru_majflt": 0,
+            "ru_nivcsw": 63
+        },
+        "ru_childs_end": {
+            "ru_nvcsw": 5,
+            "ru_stime_sec": 0.0064099999999999999,
+            "ru_utime_sec": 0.0010679999999999999,
+            "ru_maxrss_kb": 21680,
+            "ru_minflt": 591,
+            "ru_majflt": 0,
+            "ru_nivcsw": 2
+        },
+        "peak_mem_kb": 267040
+    }
+}

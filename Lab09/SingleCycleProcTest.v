@@ -89,9 +89,10 @@ module SingleCycleProcTest_v;
         // ***********************************************************
         // Add your new tests here
         // ***********************************************************
+		
 
         // Done
-        allPassed(passed, 2);   // Be sure to change the one to match
+        allPassed(passed, 1);   // Be sure to change the one to match
                                 // the number of tests you add.
         $finish;
     end

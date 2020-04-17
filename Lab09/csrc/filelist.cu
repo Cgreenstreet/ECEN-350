@@ -1,12 +1,12 @@
 PIC_LD=ld
 
 ARCHIVE_OBJS=
-ARCHIVE_OBJS += _25190_archive_1.so
-_25190_archive_1.so : archive.29/_25190_archive_1.a
+ARCHIVE_OBJS += _28514_archive_1.so
+_28514_archive_1.so : archive.35/_28514_archive_1.a
 	@$(AR) -s $<
-	@$(PIC_LD) -shared  -o .//../SingleCycleMOVSIM.daidir//_25190_archive_1.so --whole-archive $< --no-whole-archive
+	@$(PIC_LD) -shared  -o .//../SingleCycleMOVSIM.daidir//_28514_archive_1.so --whole-archive $< --no-whole-archive
 	@rm -f $@
-	@ln -sf .//../SingleCycleMOVSIM.daidir//_25190_archive_1.so $@
+	@ln -sf .//../SingleCycleMOVSIM.daidir//_28514_archive_1.so $@
 
 
 

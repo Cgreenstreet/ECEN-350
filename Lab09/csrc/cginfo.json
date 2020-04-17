@@ -1,74 +1,37 @@
 {
-    "MlibObjs": {},
-    "stat": {
-        "peak_mem_kb": 267056,
-        "totalObjSize": 115641,
-        "mop/quad": 3.058449074074074,
-        "ru_self_cgstart": {
-            "ru_majflt": 0,
-            "ru_utime_sec": 0.096833000000000002,
-            "ru_stime_sec": 0.056397000000000003,
-            "ru_maxrss_kb": 63680,
-            "ru_nvcsw": 218,
-            "ru_minflt": 14679,
-            "ru_nivcsw": 59
-        },
-        "nQuads": 1728,
-        "outputSizePerQuad": 66.0,
-        "ru_childs_cgstart": {
-            "ru_majflt": 0,
-            "ru_utime_sec": 0.0,
-            "ru_stime_sec": 0.0,
-            "ru_maxrss_kb": 0,
-            "ru_nvcsw": 0,
-            "ru_minflt": 0,
-            "ru_nivcsw": 0
-        },
-        "nMops": 5285,
-        "ru_self_end": {
-            "ru_majflt": 0,
-            "ru_utime_sec": 0.154617,
-            "ru_stime_sec": 0.076774999999999996,
-            "ru_maxrss_kb": 70296,
-            "ru_nvcsw": 313,
-            "ru_minflt": 17344,
-            "ru_nivcsw": 63
-        },
-        "ru_childs_end": {
-            "ru_majflt": 0,
-            "ru_utime_sec": 0.000852,
-            "ru_stime_sec": 0.0068209999999999998,
-            "ru_maxrss_kb": 21928,
-            "ru_nvcsw": 5,
-            "ru_minflt": 590,
-            "ru_nivcsw": 2
-        },
-        "mopSpeed": 91461.304167243521,
-        "quadSpeed": 29904.471826111032,
-        "CodeGen(%)": 37.372345861063145,
-        "Frontend(%)": 62.627654138936862
+    "Misc": {
+        "default_output_dir": "csrc",
+        "cwd": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab09",
+        "csrc": "csrc",
+        "daidir": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab09/SingleCycleMOVSIM.daidir",
+        "csrc_abs": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab09/csrc",
+        "archive_dir": "archive.35",
+        "daidir_abs": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab09/SingleCycleMOVSIM.daidir"
     },
+    "MlibObjs": {},
+    "CurCompileUdps": {},
     "PrevCompiledModules": {
         "SingleCycleProcTest_v": {
             "keWLg_d": {
-                "bytes": 52796,
-                "archive": "archive.29/_25190_archive_1.a",
+                "checksum": 0,
+                "bytes": 55358,
                 "mod": "SingleCycleProcTest_v",
+                "archive": "archive.35/_28514_archive_1.a",
                 "out": "keWLg_d.o",
-                "mode": 4,
-                "checksum": 0
+                "mode": 4
             }
         },
         "...MASTER...": {
             "amcQw_d": {
+                "checksum": 0,
                 "bytes": 7291,
                 "mod": "...MASTER...",
                 "mode": 4,
-                "checksum": 0,
                 "out": "objs/amcQw_d.o"
             }
         }
     },
+    "CompileStrategy": "fullobj",
     "NameTable": {
         "SingleCycleProcTest_v": [
             "SingleCycleProcTest_v",
@@ -81,33 +44,70 @@
             "module"
         ]
     },
-    "CompileStrategy": "fullobj",
-    "SIMBData": {
-        "out": "amcQwB.o",
-        "bytes": 62845,
-        "archive": "archive.29/_25190_archive_1.a"
+    "stat": {
+        "ru_self_cgstart": {
+            "ru_nvcsw": 226,
+            "ru_stime_sec": 0.062736,
+            "ru_utime_sec": 0.093590000000000007,
+            "ru_maxrss_kb": 63432,
+            "ru_minflt": 14617,
+            "ru_majflt": 0,
+            "ru_nivcsw": 59
+        },
+        "nQuads": 1451,
+        "mopSpeed": 91016.200294550799,
+        "ru_childs_cgstart": {
+            "ru_nvcsw": 0,
+            "ru_stime_sec": 0.0,
+            "ru_utime_sec": 0.0,
+            "ru_maxrss_kb": 0,
+            "ru_minflt": 0,
+            "ru_majflt": 0,
+            "ru_nivcsw": 0
+        },
+        "ru_self_end": {
+            "ru_nvcsw": 324,
+            "ru_stime_sec": 0.086279999999999996,
+            "ru_utime_sec": 0.14791000000000001,
+            "ru_maxrss_kb": 70144,
+            "ru_minflt": 17322,
+            "ru_majflt": 0,
+            "ru_nivcsw": 63
+        },
+        "quadSpeed": 26712.076583210601,
+        "totalObjSize": 119265,
+        "nMops": 4944,
+        "ru_childs_end": {
+            "ru_nvcsw": 5,
+            "ru_stime_sec": 0.0064099999999999999,
+            "ru_utime_sec": 0.0010679999999999999,
+            "ru_maxrss_kb": 21680,
+            "ru_minflt": 591,
+            "ru_majflt": 0,
+            "ru_nivcsw": 2
+        },
+        "CodeGen(%)": 36.725035494557503,
+        "mop/quad": 3.4073053066850449,
+        "outputSizePerQuad": 82.0,
+        "Frontend(%)": 63.27496450544249,
+        "peak_mem_kb": 267040
     },
-    "CurCompileUdps": {},
+    "SIMBData": {
+        "archive": "archive.35/_28514_archive_1.a",
+        "out": "amcQwB.o",
+        "bytes": 63549
+    },
     "CurCompileModules": [
         "...MASTER...",
         "SingleCycleProcTest_v",
         "SingleCycleProcTest_v"
     ],
-    "CompileProcesses": [
-        "cgproc.25190.json"
-    ],
     "LVLData": [
         "SIM"
     ],
     "PEModules": [],
-    "Misc": {
-        "csrc_abs": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab09/csrc",
-        "cwd": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab09",
-        "archive_dir": "archive.29",
-        "csrc": "csrc",
-        "daidir": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab09/SingleCycleMOVSIM.daidir",
-        "daidir_abs": "/home/ugrads/c/caleb.greenstreet/Documents/ECEN-350/Lab09/SingleCycleMOVSIM.daidir",
-        "default_output_dir": "csrc"
-    },
-    "CompileStatus": "Successful"
+    "CompileStatus": "Successful",
+    "CompileProcesses": [
+        "cgproc.28514.json"
+    ]
 }

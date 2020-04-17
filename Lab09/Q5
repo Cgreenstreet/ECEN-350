@@ -1,0 +1,39 @@
+1. Use the MOVZ instruction, and any other instructions needed, to construct the following constant 0x123456789abcdef0 in register X9.
+
+2. Store this immediate value to memory at memory address 0x28
+
+3. Load this value back to register X10 
+
+MOVZ X9, #0xdef0 // LSL 0
+MOVZ X10, #0x9abc // LSL 16
+ORR X11, X9, X10 // X11 = 0x000009abcdef0
+MOVZ X9, #0x5678 // LSL 32
+MOVZ X10, #0x1234 // LSL 48
+ORR X12, X9, X19 // X12 = 0x1234567800000000
+ORR X9, X11, X12 // X9 = 0x123456789abcdef0
+ADD X0, XZR, XZR // X0 = 0
+STUR X9, [X0, #0x28] // X9->X0
+LDUR X10, [X9, #0x28] // X10 = X9
+
+MOVZ {opcode[31:23], shamt[22:21], Imm[20:5], Rd[4:0]} 
+
+MOVZ opcode = 110100101
+
+ORR opcode = 10101010000 
+R-Format = {opcode[31:21], Rm[20:16], shamt[15:10], Rn[9:5], Rd[4:0]}
+
+LDUR opcode = 11111000010
+D-Format = {opcode[31:21],Address [20:12], op[11:10], Rn[9:5], Rt[4:0] }
+
+/* binary instructions */
+
+[D29BDE09]->1101||0010||1001||1011||1101||1110||0000||1001|| // MOVZ X9, #0xdef0 LSL 0 
+[D2B3578A]->1101||0010||1011||0011||0101||0111||1000||1010|| // MOVZ X10, #0x9abc // LSL 16 -> 
+[AA09014B]->1010||1010||0000||1001||0000||0001||0100||1011|| // ORR X11, X9, X10 // X11 = 0x000000009abcdef0
+[D2CACF09]->1101||0010||1100||1010||1100||1111||0000||1001|| // MOVZ X9, #0x5678 // LSL 32
+[D2E2468A]->1101||0010||1110||0010||0100||0110||1000||1010|| // MOVZ X10, #0x1234 // LSL 48
+[AA09014A]->1010||1010||0000||1001||0000||0001||0100||1100|| // ORR X12, X9, X10 // X12 = 0x1234567800000000
+[AA0B0189]->1010||1010||0000||1011||0000||0001||1000||1001|| // ORR  X9, X11, X12 // X9 = 0x123456789abcdef0 
+[8B1F03E0] // ADD X0, XZR, XZR
+[F8028009] // STUR X9, [X0, #0x28]
+[F842800A] // LDUR X10, [X9, #0x28] // X10 = X9 

@@ -25,8 +25,20 @@ module ImmGenerator(Imm64, Imm26, Ctrl);
 	if(Ctrl[2:0] == 3'b011)begin // Cond. Branch
 	  Imm64 = {{45{Imm26[23]}}, Imm26[23:5]};
 	end
-	if(Ctrl[2:0] == 3'b100)begin // IW-Type
-	  Imm64 = {48'b0, Imm26[20:5]};
+	if(Ctrl[2:0] == 3'b100)begin// IW-Type 
+		if(Imm26[22:21] == 2'b00)begin// LSL 0 
+		    Imm64 = {48'b0, Imm26[20:5]};
+		end
+		if(Imm26[22:21] == 2'b01)begin //LSL 16
+ 		    Imm64 = {32'b0, Imm26[20:5], 16'b0};		
+		end
+		if(Imm26[22:21] == 2'b10) begin//LSL 32
+		    Imm64 = {16'b0, Imm26[20:5], 32'b0};
+		end
+		if(Imm26[22:21] == 2'b11)begin//LSL 48
+		    Imm64 = {Imm26[20:5], 48'b0};
+		end
+	  //Imm64 = {Imm26[20:5]<<(Imm26[22:21]*16)};
 	end
 	if(Ctrl[2:0] == 3'bxxx)begin 
           Imm64 = {64'bx};
